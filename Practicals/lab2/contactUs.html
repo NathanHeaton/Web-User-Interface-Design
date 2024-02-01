@@ -23,23 +23,24 @@
             <section class="inputs">
             <h1>Contact Form</h1>
             <form>
-                <label id="name">Enter Name:<br></label>
-                <input type="text" id="name">
+                <label for="name">Enter Name:<br></label>
+                <input type="text" id="username">
 
-                <label id="email"><br>Enter email:<br></label>
-                <input type="email"  id="email">
+                <label for="useremail"><br>Enter email:<br></label>
+                <input type="email"  id="useremail">
 
-                <label id="DOB"><br>Enter DOB:<br></label>
+                <label for="DOB"><br>Enter DOB:<br></label>
                 <input type="date" id="DOB">
 
-                <label id="fan"><br>Are you a fan?<br></label>
+                <label for="fan"><br>Are you a fan?<br></label>
                 <label>yes</label>
-                <input type="radio" name="fan" id="fan" value="fan">
-                <label><br>no</label>
-                <input type="radio" name="fan" id="fan" value="not-a-fan">
+                <input type="radio" name="fan" value="fan">                <label><br>no</label>
+                <input type="radio" name="fan" value="not-a-fan">
 
-                <label for="submit"><br></label><input type="submit">
+                <label for="submit"><br></label><input type="submit" id="submit" onclick="validateForm()">
             </form>
+
+            <button id="dataRetrive" onclick="retriveData()">load data</button>
             </section>
 
             <section class="contact-info">
