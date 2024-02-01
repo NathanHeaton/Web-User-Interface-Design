@@ -10,13 +10,23 @@ let fan = 0;
 
 function validateForm()
 {
+    // sets variables to user input
     username = document.getElementById("username").value;
     email = document.getElementById("useremail").value;
     DOB = document.getElementById("DOB").value;
     console.log("form is being validate")
+    // makes sure you have enterd something into username
     if(username == "")
     {
-        alert("please fill text feilds");
+        alert("please enter name");
+    }
+    else if(email == "")
+    {
+        alert("please enter email");
+    }
+    else if(DOB == "")
+    {
+        alert("please DOB");
     }
     else
     {
@@ -27,7 +37,13 @@ function validateForm()
 
 
 }
-
+let cost = 10;
+function changeTableData()
+{
+    // changes the cost of one of the tickets
+    document.getElementById("table-of-data").rows[1].cells[3].innerHTML = cost.toString();
+    cost = cost + cost;
+}
 
 function saveInfo()
 {
