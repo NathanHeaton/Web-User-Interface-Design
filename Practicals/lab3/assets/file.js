@@ -79,3 +79,14 @@ function retriveData()
         alert("no saved data");
     }
 }
+
+function openpage()
+{
+    window.location.href= "https://www.wikipedia.org/";
+
+}
+
+function openWindow()
+{
+    window.open("contactUs.html")
+}
