@@ -2,7 +2,7 @@ window.onload = function(){
 
 
 };
-
+let playingDropDown = document.getElementById("dropDown");
 let username = "name";
 let email = "email";
 let DOB = "10102005";
@@ -61,6 +61,7 @@ function saveInfo()
 
 }
 
+// retrieves data from contact us page
 function retriveData()
 {
     if(localStorage.getItem("name")!="")
@@ -80,13 +81,29 @@ function retriveData()
     }
 }
 
+
 function openpage()
 {
     window.location.href= "https://www.wikipedia.org/";
-
 }
 
 function openWindow()
 {
     window.open("contactUs.html")
+}
+
+// toggles news on homepage
+function toggleNews()
+{
+    if(playingDropDown.style.display == "none")// checks if drop down i displayed
+    {
+        playingDropDown.style.display = "block";// shows drop down
+        document.getElementById("dropdownButton").innerHTML = "less";
+    }
+    else
+    {
+        playingDropDown.style.display = "none";// hide drop down
+        document.getElementById("dropdownButton").innerHTML = "more";
+    }
+    
 }

@@ -2,7 +2,6 @@ window.onload = function(){
 
 
 };
-
 let username = "name";
 let email = "email";
 let DOB = "10102005";
@@ -90,3 +89,4 @@ function openWindow()
 {
     window.open("contactUs.html")
 }
+
