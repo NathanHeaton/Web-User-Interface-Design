@@ -107,3 +107,11 @@ function toggleNews()
     }
     
 }
+
+document.querySelector('#dropdownButton').addEventListener('mouseover', function(){
+    playingDropDown.style.background = "blue";
+})
+
+document.querySelector('#dropdownButton').addEventListener('mouseout', function(){
+    playingDropDown.style.background = "red";
+})
