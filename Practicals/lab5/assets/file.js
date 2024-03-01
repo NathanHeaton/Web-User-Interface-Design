@@ -1,4 +1,3 @@
-//import axios from 'axios';
 
 window.onload = function(){
 
@@ -11,18 +10,6 @@ let DOB = "10102005";
 let fan = 0;
 
 //axios api stuff - doesn't work
-/*
-axios.get("")
-
-
-
-axios.get('/user?ID=12345')
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
-*/
-
 
 
 playingDropDown.style.display = "block";
