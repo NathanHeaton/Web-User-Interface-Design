@@ -56,13 +56,17 @@ article#protocols{
     padding: 10px;
 }
 
-#web-concepts{
+.flex-container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-}
+    justify-content: center;
+  }
+
+
 @media only screen and (min-width: 600px){
     #colume1{
-        float:left;
+        
         padding: 20px;
         width:45%;
 
@@ -71,7 +75,7 @@ article#protocols{
     }
 
     #colume2{
-        float:left;
+        
         padding: 20px;
         width:45%;
         background-color: #fff;

@@ -1,0 +1,94 @@
+/* Base Layout and Structure */
+/* Main container of the weather application, providing top margin for spacing and centering text */
+#weatherApp {
+    margin-top: 50px; /* Creates space between the top of the viewport and the app */
+    text-align: center; /* Centers the content horizontally */
+}
+
+/* Container for displaying weather logs and sorting controls, centered with a maximum width for better readability on large screens */
+#weatherLogs {
+    margin: 20px auto; /* Vertically spaces the container and centers it horizontally */
+    max-width: 600px; /* Maximum width to prevent the content from stretching too wide on large screens */
+    padding: 15px; /* Padding inside the container for spacing between content and borders */
+    background-color: #f9f9f9; /* Light grey background color for slight contrast */
+    border: 1px solid #ddd; /* Light grey border for subtle definition */
+    border-radius: 8px; /* Rounded corners for a softer look */
+}
+
+/* Container for sorting and filtering controls, with bottom margin for spacing from the list below */
+#logControls {
+    margin-bottom: 15px; /* Space between controls and the weather log list */
+    text-align: center; /* Centers the buttons within the container */
+}
+
+/* Unordered list that will contain individual weather logs, with no default list styling for a clean look */
+#logList {
+    padding: 0; /* Removes default padding */
+    list-style-type: none; /* Removes default list item markers */
+}
+
+/* Individual list items representing weather logs, styled as cards with subtle shadows for depth */
+#logList li {
+    margin-bottom: 8px; /* Adds space between individual log entries */
+    padding: 10px; /* Padding inside each log entry for spacing */
+    background-color: white; /* White background for contrast with the container */
+    border-radius: 5px; /* Slightly rounded corners for a modern look */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for a 3D effect */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effects */
+}
+
+/* Interactivity and Animations */
+/* Styling for buttons within the logControls container and the submit button, with consistent look and interactive feedback */
+#logControls button,
+#submitBtn {
+    padding: 5px 10px; /* Padding for a larger clickable area */
+    margin: 0 5px; /* Horizontal margin to separate buttons */
+    background-color: #007bff; /* Primary blue color for visibility */
+    color: white; /* White text for contrast */
+    border: none; /* Removes the default border */
+    border-radius: 5px; /* Rounded corners for a modern, touch-friendly design */
+    cursor: pointer; /* Changes the cursor to a pointer to indicate clickability */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover for visual feedback */
+}
+
+/* Hover state for buttons to darken the background color, indicating interactivity */
+#logControls button:hover {
+    background-color: #0056b3; /* Darker shade of blue for the hover state */
+}
+
+/* Hover effect for list items to create a lifting effect, improving user interaction experience */
+#logList li:hover {
+    transform: translateY(-2px); /* Slightly lifts the item upwards */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Increases shadow to enhance the lifting effect */
+}
+
+/* Animation applied to the submit button to indicate an action, such as loading or processing */
+#submitBtn {
+    animation: spin 0.5s linear; /* Applies the 'spin' keyframe animation with a duration of 0.5 seconds */
+}
+
+/* Temperature Color Coding */
+/* Color codes for different temperature ranges, enhancing visual differentiation */
+.cold { color: #00f; } /* Blue color for cold temperatures */
+.mild { color: #090; } /* Green color for mild temperatures */
+.hot { color: #f00; } /* Red color for hot temperatures */
+
+/* Keyframes and Animations */
+/* Keyframe for a simple fade-in effect, used to smoothly introduce elements */
+@keyframes fadeIn {
+    from { opacity: 0; } /* Starts fully transparent */
+    to { opacity: 1; } /* Ends fully opaque */
+}
+
+/* Keyframe for a spinning animation, creating a visual effect for loading or refreshing */
+@keyframes spin {
+    from { transform: rotate(0deg); } /* Starts with no rotation */
+    to { transform: rotate(360deg); } /* Rotates a full 360 degrees */
+}
+
+/* Typography and Fine-tuning */
+/* Styles for span elements within list items, such as city name, temperature, and conditions */
+#logList li span {
+    display: inline-block; /* Allows margin to be applied, and helps with layout */
+    margin-right: 15px; /* Adds spacing between spans for readability */
+}
