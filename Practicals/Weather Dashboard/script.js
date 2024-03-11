@@ -106,6 +106,8 @@ function handleDrop(event) {
 }
 
 // Function to sort the weather log entries by city name
+let citysort = true; //true for accending 
+
 function sortByCity() {
     const logList = document.getElementById('logList');
     const logs = Array.from(logList.children);
@@ -113,13 +115,23 @@ function sortByCity() {
     logs.sort((a, b) => {
         const cityA = a.querySelector('span.city').textContent;
         const cityB = b.querySelector('span.city').textContent;
-        return cityA.localeCompare(cityB);
+        if (citysort == true)
+        {
+            return cityA.localeCompare(cityB);
+        }
+        else{
+            return cityB.localeCompare(cityA);            
+        }
     });
 
-    logs.forEach(log => logList.appendChild(log)); // Re-append to apply the new order
+    logs.forEach(log => logList.appendChild(log)); // Re-append to apply the new order  
+    citysort= !citysort;
 }
 
 // Function to sort the weather log entries by temperature
+
+let tempSort = true; //true for accending 
+
 function sortByTemperature() {
     const logList = document.getElementById('logList');
     const logs = Array.from(logList.children);
@@ -127,22 +139,45 @@ function sortByTemperature() {
     logs.sort((a, b) => {
         const tempA = parseFloat(a.querySelector('span.temperature').textContent.split(':')[1]);
         const tempB = parseFloat(b.querySelector('span.temperature').textContent.split(':')[1]);
-        return tempA - tempB;
+        if (tempSort == true)
+        {
+            document.getElementById("sortByTemp").innerHTML = "Sort by Temprature (accending)";
+            return tempA - tempB;
+        }
+        else{
+            document.getElementById("sortByTemp").innerHTML = "Sort by Temprature (decending)";
+            return tempB - tempA;
+        }
     });
 
     logs.forEach(log => logList.appendChild(log)); // Re-append to apply the new order
+    tempSort = !tempSort; // swaps order
 }
 
 // Function to sort conditions
+let conditionSort = true; //true for accending
+
 function sortByCondition() {
     const logList = document.getElementById('logList');
     const logs = Array.from(logList.children);
-    console.log("doing conditions")
     logs.sort((a, b) => {
         const conditionA = a.querySelector('span.conditions').textContent;
-        const conditionB = b.querySelector('span.conditions').textContent;      
-        return conditionA.localeCompare(conditionB); // compares a to b
+        const conditionB = b.querySelector('span.conditions').textContent;
+        if (conditionSort == true)
+        {
+            document.getElementById("sortByCondition").innerHTML = "Sort by Condition (accending)";// tells user if it's the order it's in
+            return conditionA.localeCompare(conditionB); // compares a to b                    
+        }  
+        else
+        {
+            document.getElementById("sortByCondition").innerHTML = "Sort by Condition (decending)";
+            return conditionB.localeCompare(conditionA); // compares a to b            
+        }   
+       
     });
 
     logs.forEach(log => logList.appendChild(log)); // Re-append to apply the new order
+    conditionSort = !conditionSort;// swaps order
+    
 }
+
