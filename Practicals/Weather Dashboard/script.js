@@ -45,7 +45,9 @@ function createWeatherLog(data) {
     const uniqueId = uuidv4();
     logEntry.setAttribute('id', uniqueId);
     enableDragAndDrop(logEntry);
-
+    
+   
+   
     // Assign class names for styling purposes
     cityName.className = "city";
     temperature.className = "temperature";
@@ -73,8 +75,10 @@ function createWeatherLog(data) {
     document.getElementById('logList').appendChild(logEntry);
 
     // Animate the log entry's appearance using opacity
-    logEntry.style.opacity = 0;
-    setTimeout(() => logEntry.style.opacity = 1, 10);
+    //logEntry.style.opacity = 0;
+    //setTimeout(() => logEntry.style.opacity = 1, 10);
+
+    
 }
 
 // Function to enable drag-and-drop functionality for log entries
@@ -125,6 +129,8 @@ function sortByCity() {
     });
 
     logs.forEach(log => logList.appendChild(log)); // Re-append to apply the new order  
+    $(logs).hide();
+    reorderFadeIn(0, logs);
     citysort= !citysort;
 }
 
@@ -150,7 +156,11 @@ function sortByTemperature() {
         }
     });
 
+
     logs.forEach(log => logList.appendChild(log)); // Re-append to apply the new order
+    $(logs).hide();
+    reorderFadeIn(0, logs);
+
     tempSort = !tempSort; // swaps order
 }
 
@@ -165,7 +175,7 @@ function sortByCondition() {
         const conditionB = b.querySelector('span.conditions').textContent;
         if (conditionSort == true)
         {
-            document.getElementById("sortByCondition").innerHTML = "Sort by Condition (accending)";// tells user if it's the order it's in
+            document.getElementById("sortByCondition").innerHTML = "Sort by Condition (ascending)";// tells user if it's the order it's in
             return conditionA.localeCompare(conditionB); // compares a to b                    
         }  
         else
@@ -177,7 +187,26 @@ function sortByCondition() {
     });
 
     logs.forEach(log => logList.appendChild(log)); // Re-append to apply the new order
+    $(logs).hide();
+    reorderFadeIn(0, logs);
+    
     conditionSort = !conditionSort;// swaps order
     
 }
+
+function reorderFadeIn(i, t_log)
+{
+    length = $(t_log).length;
+
+    if (i < length)
+    {
+        console.log(i)
+        $(t_log[i]).fadeIn(500)
+        setTimeout(function () {
+            reorderFadeIn(i += 1, t_log);           
+        }, 100);
+    }
+
+}
+
 
