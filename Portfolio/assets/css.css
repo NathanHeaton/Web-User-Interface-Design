@@ -1,0 +1,63 @@
+
+#nav-area{
+    background-color:#69de90;
+    position: absolute;
+    top:0px;
+    width: 100%;
+    left:0px;
+    display: flex;
+}
+
+body{
+    background-color: #1e1e1e;
+    
+}
+h1{
+    color:#FFF;
+    font-family: Til;
+    font-family: "Tilt Warp", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "XROT" 0,
+      "YROT" 0;
+}
+
+nav{
+    
+    padding: 25px;
+    padding-left: 30%;
+}
+a{
+    color:#FFF;
+    font-family: Til;
+    font-family: "Tilt Warp", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "XROT" 0,
+      "YROT" 0;
+    font-size: large;
+    padding: 15px;
+}
+
+#text-side
+{
+    
+
+}
+
+.flexbox
+{
+    display: flexbox;
+    flex-direction: row;
+}
+
+#content
+{
+    padding-top: 30%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
