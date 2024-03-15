@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Nathan Heaton">
         <title>Nathan Heaton Portfolio</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
@@ -17,17 +19,26 @@
     <body>
         <img id="logo" src="assets/img/logo.png" alt="N logo">
         <div id="nav-area">
-            <section id="nav-content"></section>
-            <div id="title">
-                <h1> Nathan Heaton</h1>
-            </div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="codeProjects.html">Code Projects</a>
-                <a href="artProjects.html">Art Projects</a>
-                <a href="misc.html">Mics</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+            <section id="nav-content">
+                <button id="hamburger">|||</button>
+
+                <h1 class="desktop"> Nathan H</h1>             
+
+                <nav>
+                    <div class="topnav">
+                        <!--current page-->
+                        <a href="index.html" class="active" >Home</a>
+                        <!--other pages-->
+                        <a href="codeProjects.html">Code Projects</a>
+                        <a href="artProjects.html">Art Projects</a>
+                        <a href="misc.html">Mics</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </nav>
+            </section>
+        </div>
+        <div class="mobile" id="title-mobile">
+            <h1 class="mobile"> Nathan H</h1>
         </div>
         <div id="content">
             <div class="flexbox">
@@ -39,10 +50,38 @@
                     <p>Welcome to my portfolio website here you can find all of my art and programming work.</p>
                     <button class="btn">Learn more</button>
                 </section>
+                <section id="image-side">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#myCarousel" data-slide-to="1"></li>
+                          <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                      
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <img src="assets\img\Concept Landscape.png" alt="alien Landscape" id="carousel-Images">
+                          </div>
+                      
+                          <div class="item">
+                            <img src="assets\img\ceramicCloseUp.jpg" alt="ceramic building" >
+                          </div>
+                      
+                          <div class="item" >
+                            <img src="assets\img\cat_Player1.png" alt="pixle art cat sprite sheet "id="cat" >
+                          </div>
+                        </div>                  
+                      </div>
+                </section>
             </div>
         </div>
 
-
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
        <script src="assets/file.js"></script>
     </body>
 </html>
