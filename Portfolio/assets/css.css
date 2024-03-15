@@ -103,7 +103,7 @@
     }
     #carousel-Images
     {
-        object-fit: cover;
+        min-width:60%;
     }
 
   }
@@ -152,6 +152,43 @@
     position: fixed;
     top:0px;
     left: 0px;
+    
+}
+
+#logo{
+    z-index: 1;
+    padding: 10px;
+    margin-right: 100px;
+    width: 80px;
+}
+
+#about{
+    padding: 15px;
+}
+#text-side{
+    position: fixed;
+    top:400px;
+    left: 0px;
+    display: block;
+    color:#FFF;
+    font-family: "Alegreya", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 10%
+}
+#carousel-Images{
+    width: 100%;
+}
+
+#title-mobile{
+    background-color:#69de90;
+    position: absolute;
+    top:300px;
+    width: 100%;
+    left:0px;
+    height: 60px;
+
 }
   }
 h1{
@@ -168,15 +205,9 @@ h1{
     
 }
 
-#title-mobile{
-    background-color:#69de90;
-    position: absolute;
-    top:400px;
-    width: 100%;
-    left:0px;
-    height: 60px;
 
-}
+
+
 
 .btn{
 font-family: Til;
