@@ -9,7 +9,7 @@
         left:0px;
         height: 100px;
         display: flex;
-        margin: 0%;
+
     }
     /*hide in desktop*/
     .mobile{
@@ -57,11 +57,13 @@
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
-        padding-top: 10%
+        padding-top: 10%;
+        padding-right: 10%;
 
     }
         #content
     {
+        padding-top: 100px;
         padding-left: 10%;
         min-width: 1400px; 
 
@@ -73,9 +75,6 @@
         position: relative;
         z-index: 1;
         top: 25px;
-        left: 10%;
-
-        
     }
     #hamburger{
         display: none;
@@ -84,22 +83,16 @@
     #nav-content{
         display: flex;
         min-width: 1400px;
-        margin-left: 20%;
+        margin-left: 10%;
         
     }
-        .flexbox
-    {
-        display: flex;
-        flex-direction: row;
-        margin: 0px;
-        padding: 0px;
-        
-    }
+
     #image-side{
         max-height: 800px;
     }
     #text-side{
         min-width: 30%;
+        max-width: 50%
     }
     #carousel-Images
     {
@@ -111,9 +104,45 @@
     background-color: #1e1e1e;
     
 }
+p{
+    color:#FFF;
+    font-family: "Alegreya", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large
+}
+
+#contact-details{
+    padding-top: 10%;
+    margin: 15px;
+    min-width: 50%;
+}
+
+.flexbox
+{
+    display: flex;
+    flex-direction: row;
+
+    
+}
+
+h2{
+    color:#FFF;
+    font-family: Til;
+    font-family: "Tilt Warp", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "XROT" 0,
+      "YROT" 0;
+    font-size: 40;
+}
+/*mobile*/
   @media only screen and (max-width: 768px) {
 
-/*only for desktop*/
+/*for hiding desktop*/
 .desktop{
     display: none;
 
@@ -122,6 +151,12 @@
     display: flex;
 }
 
+#hamburger{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+}
 
 .active {
     background-color: #69de90;
@@ -132,9 +167,11 @@
 .topnav {
     overflow: hidden;
     background-color: #333;
-    position: absolute;
-    top: 10%;
+    position: fixed;
     left: 0px;
+    top:80px;
+    width: 100%;
+    z-index: -.5;
 
   }
     
@@ -190,6 +227,9 @@
     height: 60px;
 
 }
+#content{
+   
+}
   }
 h1{
     color:#FFF;
@@ -201,7 +241,7 @@ h1{
     font-variation-settings:
       "XROT" 0,
       "YROT" 0;
-    font-size: 40px;
+    font-size: 50px;
     
 }
 

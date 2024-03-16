@@ -14,27 +14,60 @@
         <link href="assets/css.css" rel="stylesheet" text="text/css">
     </head>
     <body>
-        <img id="logo" src="assets/img/logo.png" alt="N logo">
+        
         <div id="nav-area">
-            <section id="nav-content"></section>
-            <div id="title">
-                <h1> Nathan Heaton</h1>
+            <section id="nav-content">
+                <img id="logo" src="assets/img/logo.png" alt="N logo">
+                <button id="hamburger">|||</button>
+
+                <h1 class="desktop"> Nathan H</h1>             
+
+                <nav>
+                    <div class="topnav">
+                        <!--other pages-->
+                        <a href="index.html"  >Home</a>
+                        <!--current page-->
+                        <a href="codeProjects.html">Code Projects</a>
+                        <a href="artProjects.html">Art Projects</a>
+                        <a href="misc.html">Mics</a>
+                        <a href="contact.html" class="active" >Contact</a>
+                    </div>
+                </nav>
+            </section>
+        </div>
+        <div id="content">
+            <div class="flexbox">
+                <section id="text-side">
+                           
+                    <h1>Contact</h1>
+
+                    
+                    
+                    <p><br>Feel free to contact me either by phone or email if you have any question about my past work or if you think my work 
+                        could suit one of your projects.<br><br><br></p>
+                    <button class="btn">Write to us</button>
+                
+                </section>
+                <section id="contact-details">
+                    <h2>Phone: </h2>
+                    <p>+353 085 158 3350</p>
+                    
+                    <h2>Email:</h2>
+                    <p>NathanmHeaton@gmail.com</p>        
+                </section>
             </div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="codeProjects.html">Code Projects</a>
-                <a href="artProjects.html">Art Projects</a>
-                <a href="misc.html">Mics</a>
-                <a href="contact.html">Contact</a>
-            </nav>
         </div>
 
 
 
         <footer>
-            <p>made by Nathan</p>
+         
 
        </footer>
+               <!-- jQuery library -->
+               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+               <!-- Latest compiled JavaScript -->
+               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
        <script src="assets/file.js"></script>
     </body>
 </html>
