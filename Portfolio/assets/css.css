@@ -139,6 +139,15 @@ h2{
       "YROT" 0;
     font-size: 40;
 }
+
+#about-page{
+    position: relative;
+    top:100px;
+    padding-left: 20%;
+    padding-right: 20%;
+    max-width: 1000px;
+}
+
 /*mobile*/
   @media only screen and (max-width: 768px) {
 
@@ -245,9 +254,28 @@ h1{
     
 }
 
+#btn-link:link { 
+    text-decoration: none; 
+} 
+#btn-link:visited { 
+    text-decoration: none; 
+} 
+#btn-link:hover { 
+    text-decoration: none; 
+} 
+#btn-link:active { 
+    text-decoration: none; 
+}
+  
 
-
-
+#btn-link{
+    color:#FFF;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    padding: 0px;
+}
 
 .btn{
 font-family: Til;
