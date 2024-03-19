@@ -162,9 +162,13 @@ h2{
 
 #hamburger{
     position: fixed;
+    padding: 10px;
+    top: 15px;
     right: 10px;
-    top: 10px;
     z-index: 1;
+    background-color: #FFFfff00;
+    border: none;
+    box-shadow: none;
 }
 
 .active {
@@ -206,6 +210,7 @@ h2{
     padding: 10px;
     margin-right: 100px;
     width: 80px;
+    scale: .80;
 }
 
 #about{
