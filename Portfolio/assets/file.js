@@ -2,7 +2,14 @@ document.getElementById("hamburger").addEventListener('click', toggleDropDown);
 const nav = document.getElementsByTagName("nav");
 
 
-//$(nav).hide();
+
+
+$(document).ready(function(){
+    if(window.innerWidth > 800)
+    {
+       $(nav).show();
+    }
+}) 
 
 function toggleDropDown()
 {
