@@ -17,15 +17,25 @@
           "XROT" 0,
           "YROT" 0;
         font-size: 40px;
-        
+    }
+
+    h1#projects-title{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #about-page{
+        padding-top: 180px;
+        margin: auto;
+        width: 55%;
+        padding-bottom: 50px;
+        max-width: 1000px;
     }
     nav{
-    
-        position: absolute;
+        position:absolute;
         padding: 40px;
-        
-        right: 10%;
-        
+        right: 50px;
     }
     a{
         color:#FFF;
@@ -50,15 +60,11 @@
         padding-right: 10%;
 
     }
-        #content
-    {
+    #content{
         padding-top: 100px;
         padding-left: 10%;
         min-width: 1400px; 
-
-
     }
-
     #logo
     {
         position: relative;
@@ -73,17 +79,27 @@
         display: flex;
         min-width: 1400px;
         margin-left: 10%;
-        
-        
+         
     }
     #carousel-Images{
         width: 1000px;
     }
 
-
     #text-side{
         min-width: 30%;
         max-width: 50%
+    }
+
+    .image-card{
+        width: calc(33% - 20px);
+    }
+    
+    .image-card-medium{
+        width: calc(50% - 20px);
+    }
+
+    .image-card-large{
+        width: calc(66% - 20px);
     }
 
   }
@@ -124,13 +140,99 @@ p{
 .flexbox
 {
     display: flex;
-    flex-direction: row;
-  
+    flex-wrap: wrap;
+
+}
+/* for Portofolio pages /////////////////////////////////////////////////////////////////////////////////*/
+/* Path */
+.path {
+    position: absolute;
+    width: 618px;
+    height: 826px;
+    left: 1011px;
+    top: 158px;
+    z-index: -2;
+  }
+
+  #about-page{
+    padding-top: 90px;
+    margin: auto;
+    width: 85%;
+    padding-bottom: 10px;
 }
 
+h1#projects-title{
+    font-size: 36px;
+}
+/* nav in projects pages ////////////////////////////////////////////////////*/
+.nav-portfolio{
+    margin-top: 100px;
+    min-width: 90%;
+    background-color: #0c0c0c;
+}
+
+.portfolio-nav-pos{
+    display: flex;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nav-button-content{
+    font-family: "Tilt Warp", sans-serif;
+    font-weight: 0;
+    font-size: x-large;
+    color: #fff;
+    background-color: #2f5546;
+    padding: 10px 30px;
+    border: none;
+    box-shadow: none;
+    border-radius: 0px;
+    transition : 0ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 7px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+#nav-button-content:hover{
+background-color: #69de90;
+color: #0066cc;
+border: none;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+.image-content{
+    max-width: 1800px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: calc(1500px - vh100);
+}
+
+.image-card-large{
+    padding: 10px;
+}
+
+.image-card-medium{
+    padding: 10px;
+}
+
+.image-card{
+    padding: 10px;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////// */
 h2{
     color:#FFF;
- 
     font-family: "Tilt Warp", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -139,14 +241,6 @@ h2{
       "XROT" 0,
       "YROT" 0;
     font-size: 40;
-}
-
-#about-page{
-    position: relative;
-    top:100px;
-    margin: auto;
-    width: 45%;
-    max-width: 1000px;
 }
 
 
@@ -161,6 +255,10 @@ h2{
 
 }
 
+footer{
+    background-color: #0c0c0c;
+}
+
 /*mobile*/
   @media only screen and (max-width: 768px) {
 
@@ -173,8 +271,16 @@ h2{
     display: flex;
 }
 
+h1{
+    font-size: medium;
+}
+
+.path{
+    display: none;
+}
+
 #hamburger{
-    position: fixed;
+    position: absolute;
     padding: 10px;
     top: 15px;
     right: 10px;
@@ -197,9 +303,6 @@ h2{
 .topnav {
     overflow: hidden;
     background-color: #333;
-    position: fixed;
-    left: 0px;
-    top:80px;
     width: 100%;
     z-index: -.5;
 
@@ -260,6 +363,21 @@ h2{
 
 }
 
+.flexbox{
+    flex-direction: column;
+}
+
+.image-card{
+    width: 100%;
+
+}
+.image-card-large{
+    width: 100%;
+}
+
+.image-card-medium{
+    width: 100%;
+}
   }
 h1{
     color:#FFF;
@@ -323,21 +441,15 @@ transform : translateY(-0px);
 background-color: #69de90;
 color: #0066cc;
 border: none;
-
 }
-
-
-
 @media only screen and (max-width: 1400px) {
     /*for tablets and other smaller screens*/
     nav{
-    
         position: absolute;
         padding: 40px;
         display: none;
         right: 10%;
-        
     }
-
-
   }
+
+
