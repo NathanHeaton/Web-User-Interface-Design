@@ -1,237 +1,16 @@
-@media only screen and (min-width: 768px) {
-    /* For desktop: */
 
-
-    /*hide in desktop*/
-    .mobile{
-    display: none;
-
-    }
-    h1{
-        color:#FFF;        
-        font-family: "Tilt Warp", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-variation-settings:
-          "XROT" 0,
-          "YROT" 0;
-        font-size: 40px;
-    }
-
-    h1#projects-title{
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #about-page{
-        padding-top: 180px;
-        margin: auto;
-        width: 55%;
-        padding-bottom: 50px;
-        max-width: 1000px;
-    }
-    nav{
-        position:absolute;
-        padding: 40px;
-        right: 50px;
-    }
-    a{
-        color:#FFF;
-        font-family: "Tilt Warp", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-variation-settings:
-          "XROT" 0,
-          "YROT" 0;
-        font-size: x-large;
-        padding: 15px;
-    }
-        #text-side
-    {
-        color:#FFF;
-        font-family: "Alegreya", serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        padding-top: 10%;
-        padding-right: 10%;
-
-    }
-    #content{
-        padding-top: 100px;
-        padding-left: 10%;
-        min-width: 1400px; 
-    }
-    #logo
-    {
-        position: relative;
-        z-index: 1;
-        top: 25px;
-    }
-    #hamburger{
-        display: none;
-    }
-
-    #nav-content{
-        display: flex;
-        min-width: 1400px;
-        margin-left: 10%;
-         
-    }
-    #carousel-Images{
-        width: 1000px;
-    }
-
-    #text-side{
-        min-width: 30%;
-        max-width: 50%
-    }
-
-    .image-card{
-        width: calc(33% - 20px);
-    }
-    
-    .image-card-medium{
-        width: calc(50% - 20px);
-    }
-
-    .image-card-large{
-        width: calc(66% - 20px);
-    }
-
-  }
-  body{
+/* General Styles */
+body {
     background-color: #1e1e1e;
-    
 }
 
-.carousel{
-    overflow: hidden;
-    background-size: cover;
-       
+#logo {
+    position: relative;
+    z-index: 1;
+    top: 25px;
 }
 
-.title{
-    padding: 15px;
-}
-
-
-nav{
-    display: none;
-}
-p{
-    color:#FFF;
-    font-family: "Alegreya", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: large;
-}
-
-#contact-details{
-    padding-top: 10%;
-    margin: 15px;
-    min-width: 50%;
-}
-
-.flexbox
-{
-    display: flex;
-    flex-wrap: wrap;
-
-}
-/* for Portofolio pages /////////////////////////////////////////////////////////////////////////////////*/
-/* Path */
-.path {
-    position: absolute;
-    width: 618px;
-    height: 826px;
-    left: 1011px;
-    top: 158px;
-    z-index: -2;
-  }
-
-  #about-page{
-    padding-top: 90px;
-    margin: auto;
-    width: 85%;
-    padding-bottom: 10px;
-}
-
-h1#projects-title{
-    font-size: 36px;
-}
-/* nav in projects pages ////////////////////////////////////////////////////*/
-.nav-portfolio{
-    margin-top: 100px;
-    min-width: 90%;
-    background-color: #0c0c0c;
-}
-
-.portfolio-nav-pos{
-    display: flex;
-    max-width: 1800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#nav-button-content{
-    font-family: "Tilt Warp", sans-serif;
-    font-weight: 0;
-    font-size: x-large;
-    color: #fff;
-    background-color: #2f5546;
-    padding: 10px 30px;
-    border: none;
-    box-shadow: none;
-    border-radius: 0px;
-    transition : 0ms;
-    transform: translateY(0);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    cursor: pointer;
-    margin-left: 7px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-}
-
-#nav-button-content:hover{
-background-color: #69de90;
-color: #0066cc;
-border: none;
-}
-
-
-/* //////////////////////////////////////////////////////////////////////////////// */
-
-.image-content{
-    max-width: 1800px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: calc(1500px - vh100);
-}
-
-.image-card-large{
-    padding: 10px;
-}
-
-.image-card-medium{
-    padding: 10px;
-}
-
-.image-card{
-    padding: 10px;
-}
-
-
-/* ////////////////////////////////////////////////////////////////////////////////////////////////// */
-h2{
+a{
     color:#FFF;
     font-family: "Tilt Warp", sans-serif;
     font-optical-sizing: auto;
@@ -240,43 +19,47 @@ h2{
     font-variation-settings:
       "XROT" 0,
       "YROT" 0;
-    font-size: 40;
+    font-size: x-large;
+    padding: 15px;
 }
 
+.title, h1, h2, p {
+    color: #fff;
+    font-family: "Tilt Warp", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title {
+    padding: 25px;
+    font-size: 50px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+p {
+    font-family: "Alegreya", serif;
+    font-size: large;
+}
+
+/* Navigation */
+nav {
+    display: none;
+}
 
 #nav-area{
     background-color:#69de90;
-    position: absolute;
-    top:0px;
     width: 100%;
-    left:0px;
     height: 100px;
     display: flex;
 
-}
-
-footer{
-    background-color: #0c0c0c;
-}
-
-/*mobile*/
-  @media only screen and (max-width: 768px) {
-
-/*for hiding desktop*/
-.desktop{
-    display: none;
-
-}
-#nav-content{
-    display: flex;
-}
-
-h1{
-    font-size: medium;
-}
-
-.path{
-    display: none;
 }
 
 #hamburger{
@@ -290,107 +73,11 @@ h1{
     box-shadow: none;
 }
 
-.active {
-    background-color: #69de90;
-    color: white;
-  }
-
-  #nav-area{
-    height: 70px;
-  }
-
-  /* Style the navigation menu */
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-    width: 100%;
-    z-index: -.5;
-
-  }
-    
-  /* Style navigation menu links */
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-
-#image-side{
-    z-index: -1;
-    position: relative;
-    top:80px;
-    left: 0px;
-    
+footer{
+    background-color: #0c0c0c;
 }
 
-#logo{
-    z-index: 1;
-    padding: 10px;
-    margin-right: 100px;
-    width: 85px;
-    height: 85px;
-    
-}
-
-#about{
-    padding: 15px;
-}
-#text-side{
-    position: fixed;
-    top:400px;
-    left: 0px;
-    display: block;
-    color:#FFF;
-    font-family: "Alegreya", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    padding-top: 10%;
-}
-
-
-#carousel-Images{
-    width: 100%;
-}
-
-.title{
-    padding: 15px;
-    font-size: 30px;
-    position: absolute;
-    left:80px
-
-}
-
-.flexbox{
-    flex-direction: column;
-}
-
-.image-card{
-    width: 100%;
-
-}
-.image-card-large{
-    width: 100%;
-}
-
-.image-card-medium{
-    width: 100%;
-}
-  }
-h1{
-    color:#FFF;
-    font-family: "Tilt Warp", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "XROT" 0,
-      "YROT" 0;
-    font-size: 50px;
-    
-}
+/* Button */
 
 #btn-link:link { 
     text-decoration: none; 
@@ -442,14 +129,302 @@ background-color: #69de90;
 color: #0066cc;
 border: none;
 }
-@media only screen and (max-width: 1400px) {
-    /*for tablets and other smaller screens*/
-    nav{
+
+/* Path */
+.path {
+    position: absolute;
+    width: 618px;
+    height: 826px;
+    left: 1011px;
+    top: 158px;
+    z-index: -2;
+}
+
+/* Flexbox */
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.two-sided-flex{
+    display: flex;
+}
+/* Contact Details */
+#contact-details {
+    padding-top: 15vh;
+    margin: 15px;
+    min-width: 50%;
+}
+
+#contact-text{
+    margin: 15px;
+    padding-top: 15vh;
+    padding-right: 10%;
+    min-width: 30%;
+}
+
+
+/* Portfolio Page Styles */
+#about-page {
+    padding-top: 90px;
+    margin: auto;
+    width: 85%;
+    padding-bottom: 40px;
+}
+
+#projects-title {
+    font-size: 36px;
+}
+
+#game-card1, #game-card2, #game-card3, #game-card4, #game-card5{
+    display: none;
+}
+
+.card-titles{
+    z-index: 1;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Match image width */
+    height: 100%; /* Match image height */
+    background-color: #0c0c0c71;
+    transition: opacity 0.4s;
+    opacity: 0;
+    padding: 25px;
+    padding-top: 0px;
+    transition: padding-top 0.4s;
+}
+
+.card-titles:hover {
+    opacity: 1;
+    padding-top: 25px;
+}
+/* Navigation in Portfolio Pages */
+.nav-portfolio {
+    min-width: 90%;
+    background-color: #0c0c0c;
+}
+
+.portfolio-nav-pos {
+    display: flex;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nav-button-content {
+    font-family: "Tilt Warp", sans-serif;
+    font-size: x-large;
+    color: #fff;
+    background-color: #2f5546;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 0px;
+    transition: 0ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px 7px;
+}
+
+#nav-button-content:hover {
+    background-color: #69de90;
+    color: #0066cc;
+}
+
+/* Image Content */
+.image-content {
+    max-width: 1800px;
+    width: 90%;
+    margin: 0 auto;
+    min-height: calc(1500px - 20vh);
+}
+
+.image-card, .image-card-medium, .image-card-large {
+    margin: 10px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    /* Mobile */
+    .desktop {
+        display: none;
+    }
+
+    .path {
+        display: none;
+    }
+
+    #nav-area {
+        height: 70px;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+        width: 100%;
+        z-index: -0.5;
+    }
+
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    #logo{
+        z-index: 1;
+        padding: 10px;
+        margin-right: 100px;
+        width: 85px;
+        height: 85px;
+        position: absolute;
+        top: 15px;
+        
+    }
+
+    #image-side {
+        position: relative;
+        top: 80px;
+        left: 0;
+        z-index: -1;
+    }
+
+    #text-side {
+        position: fixed;
+        top: 400px;
+        left: 0;
+        display: block;
+        color: #fff;
+        font-family: "Alegreya", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        padding-top: 10%;
+    }
+
+    .title {
+        position: absolute;
+        top: 15px;
+        left: 80px;
+        font-size: medium;
+        font-size: 25px
+    }
+
+    .image-card, .image-card-medium, .image-card-large {
+        width: 100%;
+    }
+
+    .two-sided-flex{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #content{
+        width: 85%;
+        
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+    /* Tablets and smaller screens */
+    nav {
         position: absolute;
         padding: 40px;
         display: none;
         right: 10%;
     }
-  }
+}
 
+@media only screen and (min-width: 768px) {
+    /* Desktop */
+    .mobile {
+        display: none;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+
+
+    h1#projects-title {
+        width: 70%;
+        margin: 0 auto;
+        font-size: 36px;
+        padding-bottom: 30px;
+    }
+
+    #about-page {
+        padding-top: 100px;
+        margin: auto;
+        width: 55%;
+        padding-bottom: 80px;
+        max-width: 1000px;
+    }
+
+    nav {
+        position: absolute;
+        padding: 40px;
+        right: 50px;
+    }
+
+    a {
+        padding: 15px;
+    }
+
+    #text-side {
+        padding-top:25vh ;
+        padding-right: 10%;
+        min-width: 30%;
+        max-width: 50%;
+        align-items: center;
+    }
+
+    #content {
+        padding-left: 10%;
+        min-width: 1400px;
+    }
+
+    #logo {
+        position: relative;
+        z-index: 1;
+        top: 25px;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #nav-content {
+        display: flex;
+        min-width: 1400px;
+        margin-left: 10%;
+    }
+
+    #carousel-Images {
+        width: 1000px;
+    }
+
+    .image-card {
+        width: calc(33% - 20px);
+    }
+
+    .image-card-medium {
+        width: calc(50% - 20px);
+    }
+
+    .image-card-large {
+        width: calc(66% - 20px);
+    }
+}
 
