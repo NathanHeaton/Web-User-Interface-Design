@@ -1,5 +1,4 @@
-document.getElementById("hamburger").addEventListener('click', toggleDropDown);
-const nav = document.getElementsByTagName("nav");
+const nav = document.getElementsByClassName("main-nav");
 const gamesPage = document.getElementById("games")
 const websitesPage = document.getElementById("websites")
 const webCards = [document.getElementById("web-card1"),document.getElementById("web-card2"),document.getElementById("web-card3"),document.getElementById("web-card4")];  
