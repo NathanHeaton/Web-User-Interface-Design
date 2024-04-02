@@ -67,3 +67,80 @@ function displayGames()
     },100)
     cardCount =0;//resets counter
 }
+
+
+// enlarge card
+function enlargeCard(t_this)
+{
+    // gets all the elements that need to be altered
+    let element = t_this.closest("section");// gets the full card content to alter
+    let image1 = element.querySelectorAll(".image-card");
+    let text = element.querySelectorAll(".card-text");
+    let cardTitle = element.querySelectorAll(".card-titles");
+    let backButton = element.querySelectorAll(".back-button");
+
+
+    if(window.innerWidth < 800) // if on mobile
+    {
+        element.style.width = "100vw"
+        //element.style.padding = "-50px"
+
+    }
+    else{ 
+        element.style.width = "100%"
+    }
+    element.style.backgroundColor = "#0c0c0c";
+
+    // hide hover effect
+    $(cardTitle[0]).hide();
+
+    // alters image
+    if(window.innerWidth < 800) // if on mobile
+    {
+        image1[0].style.width = "100%";
+    }
+    else{ // for desktop
+        image1[0].style.width = "50%";
+        image1[0].style.margin = "25px";
+    }
+
+    // fades in text
+    $(text[0]).fadeIn();
+
+    // fades in button
+    $(backButton[0]).fadeIn();
+
+}
+
+function shrinkCard(t_this, t_width_before)
+{
+    // gets all the elements that need to be altered
+    let element = t_this.closest("section");// gets the full card content to alter
+    let image1 = element.querySelectorAll(".image-card");
+    let text = element.querySelectorAll(".card-text");
+    let cardTitle = element.querySelectorAll(".card-titles");
+    let backButton = element.querySelectorAll(".back-button");
+
+    // changes card back to original size
+    if(window.innerWidth < 800) // if on mobile
+    {
+        element.style.width = "100%"
+    }
+    else{
+        element.style.width = t_width_before+"%"; // for desktop
+    }
+
+    element.style.backgroundColor = "#e1e1e100";
+
+    image1[0].style.width = "100%";
+    image1[0].style.margin = "10px";
+
+    $(text[0]).hide();
+
+    
+    $(backButton[0]).hide();
+
+    // show hover effect
+    $(cardTitle[0]).toggle();
+
+}

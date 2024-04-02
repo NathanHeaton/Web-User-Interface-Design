@@ -164,7 +164,7 @@ border: none;
 }
 
 
-/* Portfolio Page Styles */
+/* Portfolio Page Styles ===============================================================================*/
 #about-page {
     padding-top: 90px;
     margin: auto;
@@ -180,6 +180,17 @@ border: none;
     display: none;
 }
 
+.card-content{
+    width: calc(33% - 20px);
+    display: flex;
+}
+
+.card-text{
+    display: none;
+    width: 50%;
+    margin: 25px;
+    margin-right: 15%;
+}
 .card-titles{
     z-index: 1;
     position:absolute;
@@ -199,6 +210,11 @@ border: none;
     opacity: 1;
     padding-top: 25px;
 }
+
+.carousel-inner-card{
+    width:70%
+}
+
 /* Navigation in Portfolio Pages */
 .nav-portfolio {
     min-width: 90%;
@@ -232,6 +248,18 @@ border: none;
 #nav-button-content:hover {
     background-color: #69de90;
     color: #0066cc;
+}
+
+.back-button{
+    display: none;
+    padding: 10px;
+    top: 15px;
+    right: 10px;
+    z-index: 1;
+    background-color: #FFFfff00;
+    border: none;
+    box-shadow: none;
+    color:#fff;
 }
 
 /* Image Content */
@@ -316,6 +344,11 @@ border: none;
         left: 80px;
         font-size: medium;
         font-size: 25px
+    }
+
+    .card-content{
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     .image-card, .image-card-medium, .image-card-large {
@@ -416,7 +449,7 @@ border: none;
     }
 
     .image-card {
-        width: calc(33% - 20px);
+        width: 100%;
     }
 
     .image-card-medium {
