@@ -5,6 +5,10 @@ const webCards = [document.getElementById("web-card1"),document.getElementById("
 const gameCards = [document.getElementById("game-card1"), document.getElementById("game-card2"), document.getElementById("game-card3"), document.getElementById("game-card4") , document.getElementById("game-card5")]
 let cardCount = 0;
 
+let isCardEnlarged = false; // keep track of if another card is enlarged
+
+let previousEnlarged= null;
+let previousEnlargedWidth= null ;
 
 $(document).ready(function(){
     if(window.innerWidth > 800)
@@ -46,6 +50,10 @@ function displayWebsites()
 //shows games on portfolio page
 function displayGames()
 {
+    if (isCardEnlarged) // if card is enlarged this card is shrinked
+    {
+        shrinkCard(previousEnlarged, previousEnlargedWidth);//this shrink that previous card
+    }
     console.log("changing to games");
     
     // hides all web cards
@@ -69,50 +77,61 @@ function displayGames()
 
 
 // enlarge card
-function enlargeCard(t_this)
+function enlargeCard(t_this, t_width)
 {
-    // gets all the elements that need to be altered
-    let element = t_this.closest("section");// gets the full card content to alter
-    let image1 = element.querySelectorAll(".image-card");
-    let text = element.querySelectorAll(".card-text");
-    let cardTitle = element.querySelectorAll(".card-titles");
-    let backButton = element.querySelectorAll(".back-button");
-
-
-    if(window.innerWidth < 800) // if on mobile
+    if (isCardEnlarged) // if card is enlarged this card is shrinked
     {
-        element.style.width = "100vw"
-        //element.style.padding = "-50px"
-
-    }
-    else{ 
-        element.style.width = "100%"
-    }
-    element.style.backgroundColor = "#0c0c0c";
-
-    // hide hover effect
-    $(cardTitle[0]).hide();
-
-    // alters image
-    if(window.innerWidth < 800) // if on mobile
-    {
-        image1[0].style.width = "100%";
-    }
-    else{ // for desktop
-        image1[0].style.width = "50%";
-        image1[0].style.margin = "25px";
+        shrinkCard(previousEnlarged, previousEnlargedWidth);//this shrink that previous card
     }
 
-    // fades in text
-    $(text[0]).fadeIn();
+        previousEnlarged = t_this;
+        previousEnlargedWidth = t_width;
 
-    // fades in button
-    $(backButton[0]).fadeIn();
+        isCardEnlarged = true;
+        // gets all the elements that need to be altered
+        let element = t_this.closest("section");// gets the full card content to alter
+        let image1 = element.querySelectorAll(".image-card");
+        let text = element.querySelectorAll(".card-text");
+        let cardTitle = element.querySelectorAll(".card-titles");
+        let backButton = element.querySelectorAll(".back-button");
+
+
+        if(window.innerWidth < 800) // if on mobile
+        {
+            element.style.width = "100vw"
+            //element.style.padding = "-50px"
+
+        }
+        else{ 
+            element.style.width = "100%"
+        }
+        element.style.backgroundColor = "#0c0c0c";
+
+        // hide hover effect
+        $(cardTitle[0]).hide();
+
+        // alters image
+        if(window.innerWidth < 800) // if on mobile
+        {
+            image1[0].style.width = "100%";
+        }
+        else{ // for desktop
+            image1[0].style.width = "calc(50% - 50px";
+            image1[0].style.margin = "25px";
+        }
+
+        // fades in text
+        $(text[0]).fadeIn();
+
+        // fades in button
+        $(backButton[0]).fadeIn();
+
 
 }
 
 function shrinkCard(t_this, t_width_before)
 {
+    isCardEnlarged = false;
     // gets all the elements that need to be altered
     let element = t_this.closest("section");// gets the full card content to alter
     let image1 = element.querySelectorAll(".image-card");
@@ -140,6 +159,7 @@ function shrinkCard(t_this, t_width_before)
     $(backButton[0]).hide();
 
     // show hover effect
-    $(cardTitle[0]).toggle();
+    $(cardTitle[0]).show();
+
 
 }

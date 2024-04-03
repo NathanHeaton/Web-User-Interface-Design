@@ -44,6 +44,10 @@ h2 {
     font-size: 40px;
 }
 
+h3 {
+    color: #aaaaaa00;
+}
+
 p {
     font-family: "Alegreya", serif;
     font-size: large;
@@ -186,16 +190,20 @@ border: none;
     display: none;
 }
 
-.card-content{
-    width: calc(33% - 20px);
+.card-content, .card-content-large, .card-content-medium{
+    width: calc(33% - 50px);
     display: flex;
+    position: relative;
+    flex-wrap: wrap;
 }
+
 
 .card-text{
     display: none;
-    width: 50%;
+    width: calc(40% - 50px);
     margin: 25px;
-    margin-right: 15%;
+    margin-right: 10%;
+    padding-top: 50px;
 }
 .card-titles{
     z-index: 1;
@@ -218,14 +226,29 @@ border: none;
     padding-top: 25px;
 }
 
-.carousel-inner-card{
-    width:70%
+.Image-inner-card{
+    width:50%;
+    height: 300px;
+    overflow: hidden;
+    margin: 15px;
+}
+
+.related-content{
+    width: 100%;
+    margin:25px;
+    display:none;
+}
+
+.related-images{
+    width: calc(33% - 30px);
+    margin:15px;
 }
 
 /* Navigation in Portfolio Pages */
 .nav-portfolio {
     min-width: 90%;
     background-color: #0c0c0c;
+    margin-bottom: 15px;
 }
 
 .portfolio-nav-pos {
@@ -260,8 +283,9 @@ border: none;
 .back-button{
     display: none;
     padding: 10px;
+    position: absolute;
     top: 15px;
-    right: 10px;
+    right: 15px;
     z-index: 1;
     background-color: #FFFfff00;
     border: none;
@@ -473,12 +497,16 @@ border: none;
         width: 100%;
     }
 
-    .image-card-medium {
-        width: calc(50% - 20px);
+    .card-content{
+        width: calc(33% - 50px);
     }
-
-    .image-card-large {
+    
+    .card-content-large{
         width: calc(66% - 20px);
     }
+    .card-content-medium{
+        width: calc(50% - 20px);
+    }
+    
 }
 
