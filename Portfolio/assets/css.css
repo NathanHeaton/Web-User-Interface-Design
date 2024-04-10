@@ -45,7 +45,7 @@ h2 {
 }
 
 h3 {
-    color: #aaaaaa00;
+    color: #858585;
 }
 
 p {
@@ -143,10 +143,10 @@ border: none;
 /* Path */
 .path {
     position: absolute;
-    width: 618px;
+    width: 40vw;
     height: 826px;
-    left: 1011px;
-    top: 158px;
+    left: 40%;
+    top: 150px;
     z-index: -2;
 }
 
@@ -191,7 +191,7 @@ border: none;
 }
 
 .card-content, .card-content-large, .card-content-medium{
-    width: calc(33% - 50px);
+    width: calc(100%);
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -227,22 +227,12 @@ border: none;
 }
 
 .Image-inner-card{
-    width:50%;
-    height: 300px;
+    width:70%;
     overflow: hidden;
-    margin: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
-.related-content{
-    width: 100%;
-    margin:25px;
-    display:none;
-}
-
-.related-images{
-    width: calc(33% - 30px);
-    margin:15px;
-}
 
 /* Navigation in Portfolio Pages */
 .nav-portfolio {
@@ -390,6 +380,16 @@ border: none;
         left: 95px;
         font-size: 42px;
    
+    }
+
+    .card-text{
+        width: calc(100%);
+        margin: 25px;
+        padding-top: 10px;
+    }
+
+    .Image-inner-card{
+        width:100%;
     }
 
     .card-content{
