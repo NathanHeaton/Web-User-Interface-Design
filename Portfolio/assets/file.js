@@ -95,6 +95,8 @@ function enlargeCard(t_this, t_width)
         let cardTitle = element.querySelectorAll(".card-titles");
         let backButton = element.querySelectorAll(".back-button");
 
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' }); // auto scrolls to element
+
 
         if(window.innerWidth < 800) // if on mobile
         {

@@ -53,6 +53,15 @@ p {
     font-size: large;
 }
 
+.center-flex{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1800px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
 /* Navigation */
 .main-nav {
     display: none;
@@ -77,9 +86,32 @@ p {
     box-shadow: none;
 }
 
+/* footer */
 footer{
     margin-top: 70px;
     background-color: #0c0c0c;
+    
+}
+
+.footer-nav{
+    
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.text-logo
+{
+    display: flex;
+    align-items: flex-end;
+}
+
+
+#logo-footer{
+    padding: 15px;
+    width: 100px;
+    height: 100px;
 }
 
 /* Button */
@@ -227,7 +259,7 @@ border: none;
 }
 
 .Image-inner-card{
-    width:70%;
+    width:75%;
     overflow: hidden;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -246,7 +278,9 @@ border: none;
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
+    flex-wrap: wrap;
 }
+
 
 #nav-button-content {
     font-family: "Tilt Warp", sans-serif;
@@ -319,6 +353,7 @@ border: none;
         z-index: 1;
         margin-top: 70px;
         height: 300px;
+        position: relative;
     }
 
     .topnav a {
@@ -339,7 +374,7 @@ border: none;
     }
 
     #logo{
-        z-index: 1;
+        z-index: 2;
         margin: 10px;
         margin-right: 100px;
         width: 80px;
@@ -348,6 +383,11 @@ border: none;
         top: 10px;
         left: 10px;
         
+    }
+
+    #logo-footer{
+        width: 80px;
+        height: 80px;
     }
 
     #image-side {
@@ -498,7 +538,7 @@ border: none;
     }
 
     .card-content{
-        width: calc(33% - 50px);
+        width: calc(33% - 20px);
     }
     
     .card-content-large{

@@ -28,7 +28,7 @@
                         <!--other pages-->
                         <a href="codeProjects.html" class="active">Code Projects</a>
                         <a href="artProjects.html">Art Projects</a>
-                        <a href="misc.html">Mics</a>
+                        <a href="misc.html">Other Work</a>
                         <a href="contact.html">Contact</a>
                     </div>
                 </nav>
@@ -158,41 +158,130 @@
                         <h1>USAP Redesign Wireframe</h1>
                         <h3>SETU Carlow</h3>
                         <p>
-                            This is a website I built in IDAD year 2 where I tested more complex html, 
-                            css and javascript. It is a responsive of website and is well layout in both mobile and desktop it makes use of jquery for smooth animations.
-                            My website also has a form that save user information to local storage
+                            This is a meduim fidelity website redesign I designed for UI testing in 2nd year. I was tasked with redesigning a website with a 
+                            bad or outdate design. USAP is a us website about Antartica, it has loads of information and programs but I found that it looked very outdated compared to other 
+                            US gov websites so I tried to give it  modern refresh
+                            <br>
+                            <br>
+                            Below is the original website:
                         </p>
-                        <button class="btn"><a href="https://c00286899.candept.com/Practicals/lab5/" id="button-link" target="_blank">Check it out</a></button>
+                        <button class="btn"><a href="https://www.usap.gov/" id="button-link" target="_blank">Check it out</a></button>
+                        <p> Here are some of the iterations I went through to get to the final design:</p>
                         
-                        <div class="carousel-inner-card" id="webItem3">
-                            <img src="assets/img/band-website-carousel1.png" alt="alien Landscape"  width="100%" height="100%" style="object-fit: cover;">
+                        <div class="Image-inner-card" id="webItem3">
+                            <img src="assets/img/USAP wire1.png" alt="first wireframe of redesign"  width="100%" height="100%" style="object-fit: cover;">
+                            <img src="assets/img/USAP wire2.png" alt="first wireframe of redesign"  width="100%" height="100%" style="object-fit: cover;">
                         </div>
                     </article>
             </section>  
             
-
+            <!--games section ------------------------------------------------------->
             <section class="flexbox" id="games">
-                <div class="image-card-medium cards" id="game-card1" >
-                    <div class="card-titles"><h2 >Cardochism</h2></div>
-                    <img src="assets/img/cardochism gameplay.PNG" alt="roulette themed bullet hell game" width="100%" object-fit: style="object-fit: cover;">
-                </div>
-                <div class="image-card-medium cards" id="game-card2">
-                    <div class="card-titles"><h2 >Escape from time</h2></div>
-                    <img src="assets/img/Escape from time gameplay.PNG" alt="website game puzzle exploration" width="100%" height="100%" style="object-fit: cover;">
-                </div>
-                <div class="image-card-large" id="game-card3">
-                    <div class="card-titles"><h2 >Cat and Rat</h2></div>
-                    <img src="assets/img/cat and rat game.PNG" alt="website game puzzle exploration" width="100%">
-                </div>
-                <div class="image-card"  id="game-card4">
-                    <div class="card-titles"><h2 >Heli-Shooter</h2></div>
-                    <img src="assets/img/Heli-shooter gameplay.PNG" alt="website game puzzle exploration" width="100%" height="100%" style="object-fit: cover;">
-                </div>
-                <div class="image-card-large" id="game-card5">
-                    <div class="card-titles"><h2 >Fish Grow</h2></div>
-                    <img src="assets/img/fish growing game.PNG" alt="website game puzzle exploration" width="100%">
-                </div>
+                <section class="card-content-medium" >
+                    <div class="image-card" id="game-card1"  onclick="enlargeCard(this, 50)">
+                        <div class="card-titles"><h2 >Cardochism</h2></div>
+                        <img src="assets/img/cardochism gameplay.PNG" alt="roulette themed bullet hell game" width="100%" object-fit: style="object-fit: cover;">
+                    </div>
+                    <button class="back-button" onclick="shrinkCard(this, 50)" >back</button>
+                    <article class="card-text" >
+                        <h1>Cardochism</h1>
+                        <h3>SETU Carlow</h3>
+                        <p>
 
+                        </p>
+                        <button class="btn"><a href="https://dnoreillysfuels.com/" id="button-link" target="_blank">Check it out</a></button>
+                        
+                        <div class="Image-inner-card" id="webItem3">
+                            <!-- add Image -->
+                            <img src="assets/img/Dnoreillys-fulspage.png" alt="fuel page"  width="100%" height="100%" style="object-fit: cover;">
+                        </div>
+                        
+                    </article>
+                </section>
+                <section class="card-content-medium" >
+                    <div class="image-card" id="game-card2"  onclick="enlargeCard(this, 50)">
+                        <div class="card-titles"><h2 >Escape from time</h2></div>
+                        <img src="assets/img/Escape from time gameplay.PNG" alt="website game puzzle exploration" width="100%" height="100%" style="object-fit: cover;">
+                    </div>
+                    <button class="back-button" onclick="shrinkCard(this, 50)" >back</button>
+                    <article class="card-text" >
+                        <h1>Cardochism</h1>
+                        <h3>SETU Carlow</h3>
+                        <p>
+
+                        </p>
+                        <button class="btn"><a href="https://dnoreillysfuels.com/" id="button-link" target="_blank">Check it out</a></button>
+                        
+                        <div class="Image-inner-card" id="webItem3">
+                            <!-- add Image -->
+                            <img src="assets/img/Dnoreillys-fulspage.png" alt="fuel page"  width="100%" height="100%" style="object-fit: cover;">
+                        </div>
+                        
+                    </article>
+                </section>
+                <section class="card-content-large" >
+                    <div class="image-card" id="game-card3"  onclick="enlargeCard(this, 66)">
+                        <div class="card-titles"><h2 >Cat and Rat</h2></div>
+                        <img src="assets/img/cat and rat game.PNG" alt="website game puzzle exploration" width="100%" height="100%" style="object-fit: cover;">
+                    </div>
+                    <button class="back-button" onclick="shrinkCard(this, 66)" >back</button>
+                    <article class="card-text" >
+                        <h1>Cat and Rat</h1>
+                        <h3>SETU Carlow</h3>
+                        <p>
+
+                        </p>
+                        <button class="btn"><a href="https://dnoreillysfuels.com/" id="button-link" target="_blank">Check it out</a></button>
+                        
+                        <div class="Image-inner-card" id="webItem3">
+                            <!-- add Image -->
+                            <img src="assets/img/Dnoreillys-fulspage.png" alt="fuel page"  width="100%" height="100%" style="object-fit: cover;">
+                        </div>
+                        
+                    </article>
+                </section>
+                <section class="card-content" >
+                    <div class="image-card" id="game-card4"  onclick="enlargeCard(this, 33)">
+                        <div class="card-titles"><h2 >Heli-Shooter</h2></div>
+                        <img src="assets/img/Heli-shooter gameplay.PNG" alt="game about fliying around and hitting targets" width="100%" height="100%" style="object-fit: cover;">
+                    </div>
+                    <button class="back-button" onclick="shrinkCard(this, 33)" >back</button>
+                    <article class="card-text" >
+                        <h1>Heli-Shooter</h1>
+                        <h3>SETU Carlow</h3>
+                        <p>
+
+                        </p>
+                        <button class="btn"><a href="https://dnoreillysfuels.com/" id="button-link" target="_blank">Check it out</a></button>
+                        
+                        <div class="Image-inner-card" >
+                            <!-- add Image -->
+                            <img src="assets/img/Dnoreillys-fulspage.png" alt="fuel page"  width="100%" height="100%" style="object-fit: cover;">
+                        </div>
+                        
+                    </article>
+                </section>    
+                <section class="card-content-large" >
+                    <div class="image-card" id="game-card5"  onclick="enlargeCard(this, 66)">
+                        <div class="card-titles"><h2 >Fish Grow</h2></div>
+                        <img src="assets/img/fish growing game.PNG" alt="website game puzzle exploration" width="100%">
+                    </div>
+                    <button class="back-button" onclick="shrinkCard(this, 66)" >back</button>
+                    <article class="card-text" >
+                        <h1>Heli-Shooter</h1>
+                        <h3>SETU Carlow</h3>
+                        <p>
+
+                        </p>
+                        <button class="btn"><a href="https://dnoreillysfuels.com/" id="button-link" target="_blank">Check it out</a></button>
+                        
+                        <div class="Image-inner-card" id="webItem3">
+                            <!-- add Image -->
+                            <img src="assets/img/Dnoreillys-fulspage.png" alt="fuel page"  width="100%" height="100%" style="object-fit: cover;">
+                        </div>
+                        
+                    </article>
+                </section>
             </section>
 
         </div>
@@ -205,19 +294,22 @@
 
 
 
-        <footer>
-            <nav>
-                <div>
+        <footer >
+            <section class="center-flex">
+                <div class="footer-nav">
                     <!--other pages-->
-                    <a href="index.html"  >Home</a>
+                    <a href="index.html">Home</a>
                     <!--current page-->
                     <a href="codeProjects.html">Code Projects</a>
                     <a href="artProjects.html">Art Projects</a>
-                    <a href="misc.html">Mics</a>
+                    <a href="misc.html">Other Work</a>
                     <a href="contact.html" >Contact</a>
                 </div>
-            </nav>
-            <img id="logo" src="assets/img/logo.png" alt="N logo">
+                <div class="text-logo">
+                    <img id="logo-footer" src="assets/img/logo.png" alt="N logo">
+                    <p>Made by Nathan Heaton<br> 2024</p>
+                </div>
+            </section>
 
        </footer>
                <!-- jQuery library -->
