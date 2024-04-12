@@ -90,12 +90,14 @@ p {
 footer{
     margin-top: 70px;
     background-color: #0c0c0c;
+    position: relative;
+    bottom: 0px;
     
 }
 
 .footer-nav{
     
-    width: 100%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
 
@@ -259,10 +261,13 @@ border: none;
 }
 
 .Image-inner-card{
-    width:75%;
+    width:100%;
     overflow: hidden;
     margin-top: 15px;
     margin-bottom: 15px;
+    display: none;
+    flex-wrap: wrap;
+    
 }
 
 
@@ -364,9 +369,11 @@ border: none;
         display: block;
         text-align: right;
         padding-top:0px ;
-        padding-bottom: 0px;
-        
+        padding-bottom: 0px;        
+    }
 
+    a{
+        font-size: medium;
     }
 
     .active {
@@ -444,6 +451,10 @@ border: none;
     .two-sided-flex{
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    .footer-nav{
+        width: 100%;
     }
 
     #content{
@@ -527,6 +538,10 @@ border: none;
         display: flex;
         min-width: 1400px;
         margin-left: 10%;
+    }
+
+    #contact-details {
+        padding-bottom: 35vh;
     }
 
     #carousel-Images {
