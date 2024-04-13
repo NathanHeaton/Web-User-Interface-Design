@@ -2,7 +2,7 @@ const nav = document.getElementsByClassName("main-nav");
 const buttonPortfolio = document.getElementById("nav-button-content");
 
 const gamesPage = document.getElementById("games")
-const gameCards = Array.from(document.querySelectorAll(".game-cards"));
+const gameCards = Array.from(document.querySelectorAll(".game-cards")); // auto makes array from class elements
 
 const websitesPage = document.getElementById("websites")
 const webCards = Array.from(document.querySelectorAll(".web-cards"));
@@ -12,8 +12,13 @@ const digitalpage = document.getElementById("digital");
 const digitalcards = Array.from(document.querySelectorAll(".digital-cards"));
 
 const tradpage = document.getElementById("trad");
+const tradcards = Array.from(document.querySelectorAll(".trad-cards"));
+
 const threeDpage = document.getElementById("threeD");
+const threeDcards = Array.from(document.querySelectorAll(".threeD-cards"));
+
 const sketchpage = document.getElementById("sketches");
+const sketchcards = Array.from(document.querySelectorAll(".sketch-cards"));
 
 let cardCount = 0;
 let tab = null;
@@ -32,9 +37,20 @@ $(document).ready(function(){
     {
        $(nav).show();
     }
-
+    // only when the art page loads
+    if(document.getElementById("digital"))// checks if there is an id of digital which means pages must be art
+    {
+        displayTab(1); // loads digital page
+    }
+     // only when the code page loads
+    if(document.getElementById("websites"))// checks if there is an id of websites which means pages must be website
+    {
+        displayTab(6); // loads web page
+    }
    
 }) 
+
+
 
 function toggleDropDown()
 {
