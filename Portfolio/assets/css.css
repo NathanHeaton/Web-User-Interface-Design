@@ -280,10 +280,13 @@ border: none;
     width:100%;
     overflow: hidden;
     margin-top: 15px;
-    margin-bottom: 15px;
     display: none;
     flex-wrap: wrap;
     
+}
+
+.Image-card-element{
+    margin-bottom: 30px;
 }
 
 
@@ -332,10 +335,11 @@ border: none;
     top: 15px;
     right: 15px;
     z-index: 1;
-    background-color: #FFFfff00;
+    background-color: #0c0c0c;
     border: none;
     box-shadow: none;
     color:#fff;
+    border-radius: 15px;
 }
 
 /* Image Content */
