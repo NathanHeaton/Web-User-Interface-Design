@@ -63,17 +63,17 @@
         
         <section class="nav-portfolio">
             <div class="portfolio-nav-pos">
-                <button id="nav-button-content" onclick="displayWebsites()">Digital Art</button>
-                <button id="nav-button-content" onclick="displayGames()">Trad Art</button>
-                <button id="nav-button-content" onclick="displayGames()">3D art</button>
-                <button id="nav-button-content" onclick="displayGames()">Sketches</button>
+                <button id="nav-button-content" onclick="displayTab(1)">Digital Art</button>
+                <button id="nav-button-content" onclick="displayTab(2)">Trad Art</button>
+                <button id="nav-button-content" onclick="displayTab(3)">3D art</button>
+                <button id="nav-button-content" onclick="displayTab(4)">Sketches</button>
             </div>
         </section>
         <div class="image-content">
         
-            <section class="flexbox" id="websites">
+            <section class="flexbox" id="digital">
                 <section class="card-content" >
-                    <div class="image-card" id="web-card1" onclick="enlargeCard(this, 33)">
+                    <div class="image-card digtal-cards"  onclick="enlargeCard(this, 33)">
                         <div class="card-titles"><h2 >Band Promotion Website</h2></div>
                         <img src="assets/img/band-website.PNG" alt="website for setu to promote a band" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -94,7 +94,57 @@
                         
                     </article>
                 </section>
+                <section class="card-content" >
+                    <div class="image-card digital-cards"  onclick="enlargeCard(this, 33)">
+                        <div class="card-titles"><h2 >Band Promotion Website</h2></div>
+                        <img src="assets/img/band-website.PNG" alt="website for setu to promote a band" width="100%" height="100%" style="object-fit: cover;">
+                    </div>
+                    <button class="back-button" onclick="shrinkCard(this, 33)" >back</button>
+                    <article class="card-text" >
+                        <h1>Band Promotion Website</h1>
+                        <h3>SETU Carlow</h3>
+                        <p>
+                            This is a website I built in IDAD year 2 where I tested more complex html, 
+                            css and javascript. It is a responsive of website and is well layout in both mobile and desktop it makes use of jquery for smooth animations.
+                            My website also has a form that save user information to local storage
+                        </p>
+                        <button class="btn"><a href="https://c00286899.candept.com/Practicals/lab5/" id="button-link" target="_blank">Check it out</a></button>
+                        
+                        <div class="Image-inner-card" id="webItem3">
+                            <img src="assets/img/band-website-carousel1.png" alt="alien Landscape"  width="100%" height="100%" style="object-fit: cover;">
+                        </div>
+                        
+                    </article>
+                </section>
+            </section>
+            <section class="flexbox" id="trad">
+                <section class="card-content" >
+                    <div class="image-card" id="trad-cards" onclick="enlargeCard(this, 33)">
+                        <div class="card-titles"><h2 >Band Promotion Website</h2></div>
+                        <img src="assets/img/band-website.PNG" alt="website for setu to promote a band" width="100%" height="100%" style="object-fit: cover;">
+                    </div>
+                    <button class="back-button" onclick="shrinkCard(this, 33)" >back</button>
+                </section>
+            </section>
+            <section class="flexbox" id="threeD">
+                <section class="card-content" >
+                    <div class="image-card" id="3D-cards" onclick="enlargeCard(this, 33)">
+                        <div class="card-titles"><h2 >Band Promotion Website</h2></div>
+                        <img src="assets/img/band-website.PNG" alt="website for setu to promote a band" width="100%" height="100%" style="object-fit: cover;">
+                    </div>
+                    <button class="back-button" onclick="shrinkCard(this, 33)" >back</button>
+                </section>
 
+            </section>
+            <section class="flexbox" id="sketches">
+                <section class="card-content" >
+                    <div class="image-card" id="sketch-cards" onclick="enlargeCard(this, 33)">
+                        <div class="card-titles"><h2 >Band Promotion Website</h2></div>
+                        <img src="assets/img/band-website.PNG" alt="website for setu to promote a band" width="100%" height="100%" style="object-fit: cover;">
+                    </div>
+                    <button class="back-button" onclick="shrinkCard(this, 33)" >back</button>
+                </section>
+            </section>
                 
         </div>
 
@@ -103,12 +153,10 @@
 
             <button class="btn"><a href="contact.html" id="button-link">Contact </a></button>
         </section>
-        <footer >
+        <footer>
             <section class="center-flex">
                 <div class="footer-nav">
-                    <!--other pages-->
                     <a href="index.html">Home</a>
-                    <!--current page-->
                     <a href="codeProjects.html">Code Projects</a>
                     <a href="artProjects.html">Art Projects</a>
                     <a href="misc.html">Other Work</a>
@@ -116,6 +164,16 @@
                     <div class="text-logo">
                         <img id="logo-footer" src="assets/img/logo.png" alt="N logo">
                         <p>Made by Nathan Heaton<br> 2024</p>
+                        <div id="social" >
+                            <a href="https://www.linkedin.com/in/nathan-heaton-478541300/" target="_blank">
+                                <img src="assets/img/5296501_linkedin_network_linkedin logo_icon.png" width="100%" height="100%">
+                            </a>
+                        </div>
+                        <div id="social" >
+                            <a href="https://github.com/NathanHeaton" target="_blank">
+                                <img src="assets/img/8725846_github_alt_icon.svg" width="100%" height="100%">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>

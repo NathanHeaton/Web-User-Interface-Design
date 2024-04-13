@@ -1,14 +1,28 @@
+/* logos and socials */
 
-/* General Styles */
-body {
-    background-color: #1e1e1e;
-}
 
 #logo {
     position: relative;
     z-index: 1;
     top: 25px;
 }
+
+#social{
+    z-index: 1;
+    position: relative;
+    height: 60px;
+    width: 60px;
+    margin :10px;
+
+}
+
+
+/* General Styles */
+body {
+    background-color: #1e1e1e;
+}
+
+
 
 a{
     color:#FFF;
@@ -107,6 +121,7 @@ footer{
 {
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 
@@ -220,7 +235,8 @@ border: none;
     font-size: 36px;
 }
 
-#game-card1, #game-card2, #game-card3, #game-card4, #game-card5{
+
+#trad, #threeD, #sketches, #digital ,#websites ,#games{
     display: none;
 }
 
@@ -376,6 +392,10 @@ border: none;
         font-size: medium;
     }
 
+    H1{
+        font-size:40px;
+    }
+
     .active {
         background-color: #69de90;
     }
@@ -462,6 +482,11 @@ border: none;
         margin-left: auto;
         margin-right: auto;
     }
+
+    #social{
+        height: 40px;
+        width: 40px;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1400px) {
@@ -512,7 +537,7 @@ border: none;
     }
 
     #text-side {
-        padding-top:25vh ;
+        padding-top:20vh ;
         padding-right: 10%;
         min-width: 30%;
         max-width: 50%;
@@ -522,6 +547,8 @@ border: none;
     #content {
         padding-left: 10%;
         min-width: 1400px;
+        position: relative;
+        height: 85vh;
     }
 
     #logo {

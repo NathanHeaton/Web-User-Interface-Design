@@ -63,14 +63,14 @@
         
         <section class="nav-portfolio">
             <div class="portfolio-nav-pos">
-                <button id="nav-button-content" onclick="displayWebsites()">Websites</button>
-                <button id="nav-button-content" onclick="displayGames()">Games</button>
+                <button id="nav-button-content" onclick="displayTab(6)">Websites</button>
+                <button id="nav-button-content" onclick="displayTab(7)">Games</button>
             </div>
         </section>
         <div class="image-content">        
             <section class="flexbox" id="websites">
                 <section class="card-content" >
-                    <div class="image-card" id="web-card1" onclick="enlargeCard(this, 33)">
+                    <div class="image-card web-cards" onclick="enlargeCard(this, 33)">
                         <div class="card-titles"><h2 >Band Promotion Website</h2></div>
                         <img src="assets/img/band-website.PNG" alt="website for setu to promote a band" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -92,7 +92,7 @@
                     </article>
                 </section>                
                 <section class="card-content-large" >
-                    <div class="image-card" id="web-card2"  onclick="enlargeCard(this, 66)">
+                    <div class="image-card web-cards"  onclick="enlargeCard(this, 66)">
                             <div class="card-titles"><h2 >DNOreilly's Fuels Website</h2></div>
                             <img src="assets/img/dnoreillys-website.PNG" alt="website for dnoreillysfuels LTD selling fuels" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -115,7 +115,7 @@
                     </article>
                 </section>
                 <section class="card-content-large" >
-                    <div class="image-card" id="web-card3" onclick="enlargeCard(this, 66)">
+                    <div class="image-card web-cards" onclick="enlargeCard(this, 66)">
                         <div class="card-titles"><h2 >Escape from Time</h2></div>
                         <img src="assets/img/Escape from time gameplay.PNG" alt="website game puzzle exploration" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -134,7 +134,7 @@
                             I used a js canvas to render the sprites, the game is both desktop and mobile compatiable and can be downloaded as a PWA it also saves 
                             user data in local storage so you play from where you left off. I also used a song I composed in FL and add walking and running sound effects I found online.
                             </p>
-                        <button class="btn"><a href="https://c00286899.candept.com/Practicals/lab5/" id="button-link" target="_blank">Check it out</a></button>
+                        <button class="btn"><a href="https://ui-programming-23-24.codeberg.page/Nathan-Heaton-C00286899-UI-Programming-Module-Project/" id="button-link" target="_blank">Check it out</a></button>
                         
                         <div class="Image-inner-card" >
                             <img src="assets/img/Escape from time future gameplay.PNG" alt="Future screen"  width="100%" height="100%" style="object-fit: cover;">
@@ -144,7 +144,7 @@
                     </article>
                 </section>                
                 <section class="card-content" >
-                    <div class="image-card" id="web-card4" onclick="enlargeCard(this, 33)">
+                    <div class="image-card web-cards" onclick="enlargeCard(this, 33)">
                         <div class="card-titles"><h2 >USAP Redesign Wireframe</h2></div>
                         <img src="assets/img/USAP redesign.PNG" alt="medium fidelity redesign of usap website" width="100%">
                     </div>
@@ -173,7 +173,7 @@
             <!--games section ------------------------------------------------------->
             <section class="flexbox" id="games">
                 <section class="card-content-medium" >
-                    <div class="image-card" id="game-card1"  onclick="enlargeCard(this, 50)">
+                    <div class="image-card game-cards"  onclick="enlargeCard(this, 50)">
                         <div class="card-titles"><h2 >Cardochism</h2></div>
                         <img src="assets/img/cardochism gameplay.PNG" alt="roulette themed bullet hell game" width="100%" object-fit: style="object-fit: cover;">
                         <div class="Image-inner-card" >
@@ -198,7 +198,7 @@
                     </article>
                 </section>
                 <section class="card-content-medium" >
-                    <div class="image-card" id="game-card2"  onclick="enlargeCard(this, 50)">
+                    <div class="image-card game-cards"  onclick="enlargeCard(this, 50)">
                         <div class="card-titles"><h2 >Escape from time</h2></div>
                         <img src="assets/img/Escape from time gameplay.PNG" alt="website game puzzle exploration" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -217,7 +217,7 @@
                             I used a js canvas to render the sprites, the game is both desktop and mobile compatiable and can be downloaded as a PWA it also saves 
                             user data in local storage so you play from where you left off. I also used a song I composed in FL and add walking and running sound effects I found online.
                             </p>
-                        <button class="btn"><a href="https://c00286899.candept.com/Practicals/lab5/" id="button-link" target="_blank">Check it out</a></button>
+                        <button class="btn"><a href="https://ui-programming-23-24.codeberg.page/Nathan-Heaton-C00286899-UI-Programming-Module-Project/" id="button-link" target="_blank">Check it out</a></button>
                         
                         <div class="Image-inner-card" >
                             <img src="assets/img/Escape from time future gameplay.PNG" alt="Future screen"  width="100%" height="100%" style="object-fit: cover;">
@@ -226,7 +226,7 @@
                     </article>
                 </section>
                 <section class="card-content-large" >
-                    <div class="image-card" id="game-card3"  onclick="enlargeCard(this, 66)">
+                    <div class="image-card game-cards"  onclick="enlargeCard(this, 66)">
                         <div class="card-titles"><h2 >Cat and Rat</h2></div>
                         <img src="assets/img/cat and rat game.PNG" alt="website game puzzle exploration" width="100%"  style="object-fit: cover;">
                         <div class="Image-inner-card" >
@@ -255,7 +255,7 @@
                     </article>
                 </section>
                 <section class="card-content" >
-                    <div class="image-card" id="game-card4"  onclick="enlargeCard(this, 33)">
+                    <div class="image-card game-cards"  onclick="enlargeCard(this, 33)">
                         <div class="card-titles"><h2 >Heli-Shooter</h2></div>
                         <img src="assets/img/Heli-shooter gameplay.PNG" alt="game about fliying around and hitting targets" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -279,7 +279,7 @@
                     </article>
                 </section>    
                 <section class="card-content-large" >
-                    <div class="image-card" id="game-card5"  onclick="enlargeCard(this, 66)">
+                    <div class="image-card game-cards"  onclick="enlargeCard(this, 66)">
                         <div class="card-titles"><h2 >Fish Grow</h2></div>
                         <img src="assets/img/fish growing game.PNG" alt="website game puzzle exploration" width="100%">
                     </div>
@@ -309,12 +309,10 @@
 
 
 
-        <footer >
+        <footer>
             <section class="center-flex">
                 <div class="footer-nav">
-                    <!--other pages-->
                     <a href="index.html">Home</a>
-                    <!--current page-->
                     <a href="codeProjects.html">Code Projects</a>
                     <a href="artProjects.html">Art Projects</a>
                     <a href="misc.html">Other Work</a>
@@ -322,6 +320,16 @@
                     <div class="text-logo">
                         <img id="logo-footer" src="assets/img/logo.png" alt="N logo">
                         <p>Made by Nathan Heaton<br> 2024</p>
+                        <div id="social" >
+                            <a href="https://www.linkedin.com/in/nathan-heaton-478541300/" target="_blank">
+                                <img src="assets/img/5296501_linkedin_network_linkedin logo_icon.png" width="100%" height="100%">
+                            </a>
+                        </div>
+                        <div id="social" >
+                            <a href="https://github.com/NathanHeaton" target="_blank">
+                                <img src="assets/img/8725846_github_alt_icon.svg" width="100%" height="100%">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>

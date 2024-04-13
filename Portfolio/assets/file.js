@@ -1,21 +1,38 @@
 const nav = document.getElementsByClassName("main-nav");
-const gamesPage = document.getElementById("games")
-const websitesPage = document.getElementById("websites")
 const buttonPortfolio = document.getElementById("nav-button-content");
-const webCards = [document.getElementById("web-card1"),document.getElementById("web-card2"),document.getElementById("web-card3"),document.getElementById("web-card4")];  
-const gameCards = [document.getElementById("game-card1"), document.getElementById("game-card2"), document.getElementById("game-card3"), document.getElementById("game-card4") , document.getElementById("game-card5")]
+
+const gamesPage = document.getElementById("games")
+const gameCards = Array.from(document.querySelectorAll(".game-cards"));
+
+const websitesPage = document.getElementById("websites")
+const webCards = Array.from(document.querySelectorAll(".web-cards"));
+
+
+const digitalpage = document.getElementById("digital");
+const digitalcards = Array.from(document.querySelectorAll(".digital-cards"));
+
+const tradpage = document.getElementById("trad");
+const threeDpage = document.getElementById("threeD");
+const sketchpage = document.getElementById("sketches");
+
 let cardCount = 0;
+let tab = null;
+let previousTab = null;
+let cards = [null];
 
 let isCardEnlarged = false; // keep track of if another card is enlarged
 
 let previousEnlarged= null;
 let previousEnlargedWidth= null ;
 
+
+
 $(document).ready(function(){
     if(window.innerWidth > 800)
     {
        $(nav).show();
     }
+
    
 }) 
 
@@ -27,67 +44,72 @@ function toggleDropDown()
 let webcardinterval;
 let gamecardinterval;
 //shows websites on portfolio page
-function displayWebsites()
+function displayTab(t_tab) // tab is the section the user clicked on e.g web or digital
 {
-    clearInterval(gamecardinterval);
-    console.log("changing to web");
-    // hides all game cards
-    for (let i = 0; i <= gameCards.length; i++)
+    
+    if(previousTab != null) // hides the previous tab
     {
-        $(gameCards[i]).hide();
+        $(previousTab).hide();
     }
+    numToTab(t_tab);
+
+    for (let i = 0; i <= cards.length; i++)
+    {
+        $(cards[i]).hide();
+    }
+
+    $(tab).show();
+    tab.style.display = "flex";
+    previousTab = tab;
     cardCount =0;//resets counter
     
     // fades in all web cards 1 by 1
-    webcardinterval = setInterval( function(){
-        $(webCards[cardCount]).fadeIn();
-        if (cardCount >= 3)
-        {
-            clearInterval(webcardinterval);
-        }
-        else
-        {
-            cardCount++;
-        }
+    for (let i = 0; i <= cards.length; i++)
+    {
+        setTimeout(function(){$(cards[i]).fadeIn()},i * 100);
         
-    },100)
+    }
+    
     cardCount =0;//resets counter
+
+
+
 
 }
 
-//shows games on portfolio page
-function displayGames()
-{
-    clearInterval(webcardinterval);
-    if (isCardEnlarged) // if card is enlarged this card is shrinked
-    {
-        shrinkCard(previousEnlarged, previousEnlargedWidth);//this shrink that previous card
-    }
-    console.log("changing to games");
-    
-    // hides all web cards
-    for (let i = 0; i < webCards.length; i++)
-    {
-        $(webCards[i]).hide();
-    }
-    cardCount =0;//resets counter
-    
-    // fades in all game cards 1 by 1
-    gamecardinterval = setInterval( function(){
-        $(gameCards[cardCount]).fadeIn();
-        if (cardCount >= 4)
-        {
-            clearInterval(gamecardinterval);
-        }
-        else
-        {
-            cardCount++;
-        }
-        
-    },100)
-    cardCount =0;//resets counter
+// translates tab in to it's class
+function numToTab(num){
 
+    switch(num){
+        case 1 :
+            tab = digitalpage;
+            cards.length = digitalcards.length;
+            cards = digitalcards;
+            break;
+        case 2 :
+            tab = tradpage;
+            break;
+        case 3 :
+            tab = threeDpage;
+            break;
+        case 4 :
+            tab = sketchpage;
+            break;
+        case 6 :
+            tab = websitesPage;
+            cards.length = webCards.length;
+            cards = webCards;
+            break;
+        case 7 :
+            tab = gamesPage;
+            cards.length = gameCards.length;
+            cards = gameCards;
+            break;
+        default:
+            console.log("tab doesn't exsit");
+    }
 }
+
 
 
 // enlarge card
