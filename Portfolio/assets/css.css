@@ -16,6 +16,12 @@
 
 }
 
+.fullsize-img{
+    width:100%;
+    height:auto;
+    object-fit: cover;
+}
+
 
 /* General Styles */
 body {
@@ -27,7 +33,6 @@ body {
 a{
     color:#FFF;
     font-family: "Tilt Warp", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
@@ -40,7 +45,6 @@ a{
 .title, h1, h2, p {
     color: #fff;
     font-family: "Tilt Warp", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
@@ -154,7 +158,6 @@ footer{
   
 #btn-link{
     color:#FFF;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
@@ -163,7 +166,6 @@ footer{
 
 .btn{
 font-family: "Tilt Warp", sans-serif;
-font-weight: 0;
 font-size: 14px;
 color: #fff;
 background-color: #2f5546;
@@ -481,7 +483,7 @@ border: none;
         width: 100%;
     }
 
-    #content{
+    .content{
         width: 100%;
         margin-left: auto;
         margin-right: auto;
@@ -548,7 +550,7 @@ border: none;
         align-items: center;
     }
 
-    #content {
+    .content {
         padding-left: 10%;
         min-width: 1400px;
         position: relative;
