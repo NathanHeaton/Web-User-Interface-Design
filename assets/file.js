@@ -147,7 +147,7 @@ function enlargeCard(t_this, t_width)
     let backButton = element.querySelectorAll(".back-button");
     let extraImages = element.querySelectorAll(".Image-inner-card");
 
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' }); // auto scrolls to element
+    
     if(window.innerWidth < 800) // if on mobile
     {
         element.style.width = "100vw"
@@ -175,6 +175,7 @@ function enlargeCard(t_this, t_width)
     // fades in images
     $(extraImages[0]).fadeIn();
     extraImages[0].style.display = "flex";
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' }); // auto scrolls to element
         
 }
 
