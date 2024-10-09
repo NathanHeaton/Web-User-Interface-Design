@@ -249,6 +249,25 @@ border: none;
     flex-wrap: wrap;
 }
 
+.card-extension{
+    margin: 40px;
+    width: 100%;
+}
+
+.green-header{
+    background-color:#2f5546;
+    padding: 20px 0 20px 0;
+}
+
+.center-align{
+    display: flex;
+    justify-content: center;
+    margin:0 auto 40px auto ;
+}
+
+.max-800{
+    max-width: 800px;
+}
 
 .card-text{
     display: none;
