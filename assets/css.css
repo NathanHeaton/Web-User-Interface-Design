@@ -250,6 +250,7 @@ border: none;
 }
 
 .card-extension{
+    display: none;
     margin: 40px;
     width: 100%;
 }
@@ -391,6 +392,10 @@ border: none;
 
     #nav-area {
         height: 70px;
+    }
+
+    .card-extension{
+        margin: 20px;
     }
 
     .topnav {

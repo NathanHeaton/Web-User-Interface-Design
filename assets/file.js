@@ -147,6 +147,11 @@ function enlargeCard(t_this, t_width)
     let backButton = element.querySelectorAll(".back-button");
     let extraImages = element.querySelectorAll(".Image-inner-card");
 
+    if (t_this.classList.contains('has-extension'))
+    {
+        $(document.getElementsByClassName("card-extension")[0]).fadeIn();
+
+    }
     
     if(window.innerWidth < 800) // if on mobile
     {
@@ -208,6 +213,8 @@ function shrinkCard(t_this, t_width_before)
         $(extraImages[0]).hide();
 
     $(text[0]).hide();
+
+    $(document.getElementsByClassName("card-extension")[0]).hide(); // only works with one extension
 
     
     $(backButton[0]).hide();
