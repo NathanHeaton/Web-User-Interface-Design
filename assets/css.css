@@ -62,7 +62,7 @@ h1 {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 38px;
 }
 
 h3 {
@@ -285,6 +285,10 @@ border: none;
     flex-wrap: wrap;
 }
 
+.split-align{
+    width: 50%;
+}
+
 .card-extension{
     display: flex;
     margin: 25px;
@@ -307,14 +311,14 @@ border: none;
 
 .green-header{
     background-color:#2f5546;
-    padding: 20px 0 20px 0;
+
     width: 100%;
 }
 
 .center-align{
     display: flex;
     justify-content: center;
-    margin:0 auto 40px auto ;
+    margin:0 auto 20px auto ;
 }
 
 .max-800{
