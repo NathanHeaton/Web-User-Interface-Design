@@ -30,6 +30,36 @@ let isCardEnlarged = false; // keep track of if another card is enlarged
 let previousEnlarged= null;
 let previousEnlargedWidth= null ;
 
+// carousel Ai written
+//==========================
+
+const slides = document.querySelectorAll('.carousel-item');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        dots[i].classList.toggle('active', i === index);
+    });
+    currentIndex = index;
+}
+
+// Attach event listeners to dots
+dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        const index = parseInt(dot.getAttribute('data-index'));
+        showSlide(index);
+    });
+});
+
+// Optional auto-slide functionality
+setInterval(() => {
+    const nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+}, 3000); // Change slide every 3 seconds
+
+
 
 
 $(document).ready(function(){
