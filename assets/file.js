@@ -30,6 +30,8 @@ let isCardEnlarged = false; // keep track of if another card is enlarged
 let previousEnlarged= null;
 let previousEnlargedWidth= null ;
 
+let openDn = "openDn";
+
 // carousel Ai written
 //==========================
 
@@ -60,8 +62,6 @@ setInterval(() => {
 }, 3000); // Change slide every 3 seconds
 
 
-
-
 $(document).ready(function(){
     if(window.innerWidth > 800)
     {
@@ -76,6 +76,7 @@ $(document).ready(function(){
     if(document.getElementById("websites"))// checks if there is an id of websites which means pages must be website
     {
         displayTab(6); // loads web page
+
     }
    
 }) 
@@ -92,31 +93,64 @@ let gamecardinterval;
 //shows websites on portfolio page
 function displayTab(t_tab) // tab is the section the user clicked on e.g web or digital
 {
+    if (sessionStorage.getItem(openDn) == "true")
+        {
+            if(previousTab != null) // hides the previous tab
+            {
+                $(previousTab).hide();
+            }
+            numToTab(t_tab);
     
-    if(previousTab != null) // hides the previous tab
-    {
-        $(previousTab).hide();
-    }
-    numToTab(t_tab);
-
-    for (let i = 0; i <= cards.length; i++)
-    {
-        $(cards[i]).hide();
-    }
-
-    $(tab).show();
-    tab.style.display = "flex";
-    previousTab = tab;
-    cardCount =0;//resets counter
+            for (let i = 0; i <= cards.length; i++)
+            {
+                $(cards[i]).hide();
+            }
     
-    // fades in all web cards 1 by 1
-    for (let i = 0; i <= cards.length; i++)
+            $(tab).show();
+            tab.style.display = "flex";
+            previousTab = tab;
+            cardCount =0;//resets counter
+            
+            // fades in all web cards 1 by 1
+            for (let i = 0; i <= cards.length; i++)
+            {
+                setTimeout(function(){$(cards[i]).fadeIn()},i * 100);
+                
+            }
+            
+            cardCount =0;//resets counter
+
+            sessionStorage.setItem(openDn, false)
+            let card = document.getElementsByClassName("image-card")[2];
+            enlargeCard(card, 66)
+        }
+    else
     {
-        setTimeout(function(){$(cards[i]).fadeIn()},i * 100);
+        if(previousTab != null) // hides the previous tab
+        {
+            $(previousTab).hide();
+        }
+        numToTab(t_tab);
+
+        for (let i = 0; i <= cards.length; i++)
+        {
+            $(cards[i]).hide();
+        }
+
+        $(tab).show();
+        tab.style.display = "flex";
+        previousTab = tab;
+        cardCount =0;//resets counter
         
+        // fades in all web cards 1 by 1
+        for (let i = 0; i <= cards.length; i++)
+        {
+            setTimeout(function(){$(cards[i]).fadeIn()},i * 100);
+            
+        }
+        
+        cardCount =0;//resets counter
     }
-    
-    cardCount =0;//resets counter
 
 
 
@@ -212,6 +246,14 @@ function enlargeCard(t_this, t_width)
     extraImages[0].style.display = "flex";
     element.scrollIntoView({ behavior: 'smooth', block: 'start' }); // auto scrolls to element
         
+}
+
+
+function OpenDnCard()
+{
+    sessionStorage.setItem("openDn", true);
+    console.log("opeinii")
+
 }
 
 function shrinkCard(t_this, t_width_before)

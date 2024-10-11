@@ -286,7 +286,7 @@ border: none;
 }
 
 .card-extension{
-    display: flex;
+    display: none;
     margin: 25px;
     max-width: 1600px;
     width: calc(100% - 50px);
@@ -448,7 +448,7 @@ border: none;
     }
 
     .card-extension{
-
+        display: none;
         margin: 20px;
     }
 
