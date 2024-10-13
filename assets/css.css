@@ -53,19 +53,28 @@ a{
 
 .title {
     padding: 25px;
-    font-size: 50px;
+    font-size: 48px;
     margin: 0;
 }
 
+.title-subText{
+    margin: 20px 0 20px 0;
+}
+
+.text-small-margin{
+    margin:0px;
+}
+
 h1 {
-    font-size: 50px;
+    font-size: 48px;
 }
 
 h2 {
-    font-size: 38px;
+    font-size: 36px;
 }
 
 h3 {
+    font-size: 32px;
     font-family: "Tilt Warp", sans-serif;
     font-weight: 400;
     color: #858585;
@@ -330,7 +339,7 @@ border: none;
     width: calc(40% - 50px);
     margin: 25px;
     margin-right: 10%;
-    padding-top: 50px;
+
 }
 
 .card-titles{
