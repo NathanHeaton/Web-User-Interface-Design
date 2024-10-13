@@ -114,15 +114,16 @@ function displayTab(t_tab) // tab is the section the user clicked on e.g web or 
             // fades in all web cards 1 by 1
             for (let i = 0; i <= cards.length; i++)
             {
-                setTimeout(function(){$(cards[i]).fadeIn()},i * 100);
+                {$(cards[i]).fadeIn()};
+                if (i == cards.length -1)
+                {
+                    sessionStorage.setItem(openDn, false)
+                    let card = document.getElementsByClassName("image-card")[2];
+                    enlargeCard(card, 66)
+                }
                 
-            }
-            
+            } 
             cardCount =0;//resets counter
-
-            sessionStorage.setItem(openDn, false)
-            let card = document.getElementsByClassName("image-card")[2];
-            enlargeCard(card, 66)
         }
     else
     {
@@ -243,7 +244,7 @@ function enlargeCard(t_this, t_width)
     $(backButton[0]).fadeIn();
     // fades in images
     $(extraImages[0]).fadeIn();
-    extraImages[0].style.display = "flex";
+
     element.scrollIntoView({ behavior: 'smooth', block: 'start' }); // auto scrolls to element
         
 }
