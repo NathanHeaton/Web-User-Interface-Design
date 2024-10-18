@@ -20,6 +20,8 @@ const threeDcards = Array.from(document.querySelectorAll(".threeD-cards"));
 const sketchpage = document.getElementById("sketches");
 const sketchcards = Array.from(document.querySelectorAll(".sketch-cards"));
 
+const cardTitleHover = document.getElementsByClassName("card-titles");
+
 let cardCount = 0;
 let tab = null;
 let previousTab = null;
@@ -54,6 +56,7 @@ dots.forEach(dot => {
         showSlide(index);
     });
 });
+
 
 // Optional auto-slide functionality
 setInterval(() => {
@@ -211,6 +214,7 @@ function enlargeCard(t_this, t_width)
     let cardTitle = element.querySelectorAll(".card-titles");
     let backButton = element.querySelectorAll(".back-button");
     let extraImages = element.querySelectorAll(".Image-inner-card");
+    let shortDescription = element.querySelectorAll(".short-description")
 
     if (t_this.classList.contains('has-extension'))
     {
@@ -229,6 +233,7 @@ function enlargeCard(t_this, t_width)
     element.style.backgroundColor = "#0c0c0c";
     // hide hover effect
     $(cardTitle[0]).hide();
+    $(shortDescription[0]).hide();
     // alters image
     if(window.innerWidth < 800) // if on mobile
     {
@@ -267,6 +272,7 @@ function shrinkCard(t_this, t_width_before)
     let cardTitle = element.querySelectorAll(".card-titles");
     let backButton = element.querySelectorAll(".back-button");
     let extraImages = element.querySelectorAll(".Image-inner-card");
+    let shortDescription = element.querySelectorAll(".short-description")
 
     // changes card back to original size
     if(window.innerWidth < 800) // if on mobile
@@ -280,7 +286,8 @@ function shrinkCard(t_this, t_width_before)
     element.style.backgroundColor = "#e1e1e100";
 
     image1[0].style.width = "100%";
-    image1[0].style.margin = "10px";
+    image1[0].style.margin = "10px 10px 0 10px";
+    $(shortDescription[0]).show();
 
         // fades in images
         $(extraImages[0]).hide();

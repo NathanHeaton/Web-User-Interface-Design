@@ -47,7 +47,7 @@ a{
 .title, h1, h2, p {
     color: #fff;
     font-family: "Tilt Warp", sans-serif;
-    font-weight: 400;
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -364,20 +364,29 @@ border: none;
 
 }
 
-.card-titles{
+.card-titles {
+    border-radius: 10px 10px 0 0;
     z-index: 1;
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Match image width */
-    height: 100%; /* Match image height */
-    background-color: #0c0c0c71;
-    transition: opacity 0.4s;
-    opacity: 0;
-    padding: 25px;
-    padding-top: 0px;
-    transition: padding-top 0.4s;
-    box-sizing: border-box;
+    width: calc(100% ); /* Match image width */
+    height: calc(100% ); /* Match image height */
+    background-color: rgba(0, 0, 0, 0); /* Fully transparent initially */
+    transition: background-color 0.6s, opacity 0.6s ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    color: white; /* Ensure title text color is visible on dark overlay */
+}
+
+
+.card-titles:hover{
+    background-color: #00000099;
+    opacity: 1;
+    cursor: pointer;
+
 }
 
 .card-main-image
@@ -397,6 +406,19 @@ border: none;
 
 .Image-card-element{
     margin-bottom: 30px;
+}
+
+.short-description{
+    background-color: #0c0c0c;
+    width: 100%;
+    margin: 0 10px 10px 10px;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+.description-text{
+    color: #e9e9e9;
+    margin:0;
 }
 
 
@@ -461,11 +483,16 @@ border: none;
 }
 
 .image-card, .image-card-medium, .image-card-large {
-    margin: 10px;
+    margin: 10px 10px 0 10px;
     width: 100%;
     position: relative;
     display: inline-block;
+
 }
+.curved-top{
+    border-radius: 10px 10px 0 0;   
+}
+
 
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
