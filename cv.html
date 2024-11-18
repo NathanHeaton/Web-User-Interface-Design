@@ -5,9 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Nathan Heaton">
         <title>Nathan Heaton Portfolio</title>
+        <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
+        <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,62 +16,29 @@
         <link href="assets/css.css" rel="stylesheet" text="text/css">
     </head>
     <body>
+        
         <header id="nav-area">
             <section id="nav-content">
                 <img id="logo" src="assets/img/logo.png" alt="N logo">
-                <button id="hamburger" ontouchstart="toggleDropDown()"><img src="assets/img/Hamburger.png"></button>
-                <h1 class="title">Nathan H</h1>             
+                <button id="hamburger"  ontouchstart="toggleDropDown()"><img src="assets/img/Hamburger.png" alt="Hamburger Button"></button>
+                <h1 class="title"> Nathan H</h1>             
                 <nav class="main-nav">
                     <div class="topnav">
                         <!--current page-->
-                        <a href="index.html" >Home</a>
+                        <a href="index.html" class="active" >Home</a>
                         <!--other pages-->
                         <a href="codeProjects.html">Code Projects</a>
                         <a href="artProjects.html">Art Projects</a>
                         <a href="misc.html">Other Work</a>
-                        <a href="contact.html" class="active">Contact</a>
+                        <a href="contact.html">Contact</a>
                         <a href="cv.html">CV</a>
                     </div>
                 </nav>
             </section>
         </header>
-        <main class="content">
-            <div class="two-sided-flex">
-                <section id="contact-text">
-                           
-                    <h1>Contact</h1>
+        <main class="image-content">
+            <iframe class="iframe" src="assets/pdf/Nathan Heaton - CV.pdf"></iframe>
 
-                    
-                    
-                    <p><br>Feel free to contact me either by phone or email if you have any question about my past work or if you think my work 
-                        could suit one of your projects.<br><br><br></p>
-                    <button class="btn">
-                        <a id="btn-link" href = "mailto:nathanmheaton@gmail.com?subject = Feedback&body = Message">
-                        Write to me
-                        </a>
-                    </button>
-                
-                </section>
-                <section id="contact-details">
-                    <h2>Phone: </h2>
-                    <p>+353 085 158 3350</p>
-                    
-                    <h2>Email:</h2>
-                    <p>NathanmHeaton@gmail.com</p>
-                    <section class="desktop">
-                        <div id="social" >
-                            <a href="https://www.linkedin.com/in/nathan-heaton-478541300/" target="_blank">
-                                <img src="assets/img/5296501_linkedin_network_linkedin logo_icon.png" width="100%" height="100%">
-                            </a>
-                        </div>
-                        <div id="social" >
-                            <a href="https://github.com/NathanHeaton" target="_blank">
-                                <img src="assets/img/8725846_github_alt_icon.svg" width="100%" height="100%">
-                            </a>
-                        </div>
-                    </section>        
-                </section>
-            </div>
         </main>
         <footer>
             <section class="center-flex">
@@ -86,21 +54,21 @@
                         <p>Made by Nathan Heaton<br> 2024</p>
                         <div id="social" >
                             <a href="https://www.linkedin.com/in/nathan-heaton-478541300/" target="_blank">
-                                <img src="assets/img/5296501_linkedin_network_linkedin logo_icon.png" width="100%" height="100%">
+                                <img src="assets/img/5296501_linkedin_network_linkedin logo_icon.png" class="fullsize-img">
                             </a>
                         </div>
                         <div id="social" >
                             <a href="https://github.com/NathanHeaton" target="_blank">
-                                <img src="assets/img/8725846_github_alt_icon.svg" width="100%" height="100%">
+                                <img src="assets/img/8725846_github_alt_icon.svg" class="fullsize-img">
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
        </footer>
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-       <!-- jQuery library -->
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
        <script src="assets/file.js"></script>
     </body>
 </html>
