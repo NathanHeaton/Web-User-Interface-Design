@@ -64,7 +64,7 @@ dots.forEach(dot => {
 setInterval(() => {
     const nextIndex = (currentIndex + 1) % slides.length;
     showSlide(nextIndex);
-}, 3000); // Change slide every 3 seconds
+}, 6000); // Change slide every 3 seconds
 
 
 $(document).ready(function(){
