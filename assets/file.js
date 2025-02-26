@@ -218,7 +218,7 @@ function enlargeCard(t_this, t_width)
 
     if (t_this.classList.contains('has-extension'))
     {
-        $(document.getElementsByClassName("card-extension")[0]).fadeIn();
+        $(element.querySelectorAll(".card-extension")[0]).fadeIn();
 
     }
     
@@ -274,6 +274,8 @@ function shrinkCard(t_this, t_width_before)
     let extraImages = element.querySelectorAll(".Image-inner-card");
     let shortDescription = element.querySelectorAll(".short-description")
 
+    $(element.querySelectorAll(".card-extension")[0]).hide();
+  
     // changes card back to original size
     if(window.innerWidth < 800) // if on mobile
     {
@@ -294,7 +296,6 @@ function shrinkCard(t_this, t_width_before)
 
     $(text[0]).hide();
 
-    $(document.getElementsByClassName("card-extension")[0]).hide(); // only works with one extension
 
     
     $(backButton[0]).hide();
