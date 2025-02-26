@@ -4,9 +4,11 @@ const buttonPortfolio = document.getElementById("nav-button-content");
 const gamesPage = document.getElementById("games")
 const gameCards = Array.from(document.querySelectorAll(".game-cards")); // auto makes array from class elements
 
-const websitesPage = document.getElementById("websites")
+const websitesPage = document.getElementById("websites");
 const webCards = Array.from(document.querySelectorAll(".web-cards"));
 
+const otherPage = document.getElementById("other");
+const otherCards = Array.from(document.querySelectorAll(".other-cards"));
 
 const digitalpage = document.getElementById("digital");
 const digitalcards = Array.from(document.querySelectorAll(".digital-cards"));
@@ -188,6 +190,11 @@ function numToTab(num){
             tab = gamesPage;
             cards.length = gameCards.length;
             cards = gameCards;
+            break;
+        case 8 :
+            tab = otherPage;
+            cards.length = otherCards.length;
+            cards = otherCards;
             break;
         default:
             console.log("tab doesn't exsit");
