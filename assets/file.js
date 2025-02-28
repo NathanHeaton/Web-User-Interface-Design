@@ -36,7 +36,12 @@ let isCardEnlarged = false; // keep track of if another card is enlarged
 let previousEnlarged= null;
 let previousEnlargedWidth= null ;
 
-let openCards = [{name:"VLE", open: false, previousWidth: 66, classIndex: 1, tab: 6},{name:"DN", open: false, previousWidth: 66, classIndex: 4, tab: 6}]; // stores cards that can be opened from other pages
+let openCards = [{name:"VLE", open: false, previousWidth: 66, classIndex: 1, tab: 6},
+                {name:"DN", open: false, previousWidth: 66, classIndex: 4, tab: 6},
+                {name:"STROW", open: false, previousWidth: 66, classIndex: 0, tab: 1},
+                {name:"PHIAST", open: false, previousWidth: 66, classIndex: 12, tab: 7},
+                {name:"RETROGRADE", open: false, previousWidth: 66, classIndex: 2, tab: 6},
+            ]; // stores cards that can be opened from other pages
 
 // carousel Ai written
 //==========================
@@ -77,15 +82,8 @@ $(document).ready(function(){
     }
 
     if (sessionStorage.length > 0)
-    for (let i = 0; i <= openCards.length; i++)
-    {
-        if ( sessionStorage.getItem(openCards[i].name))
-        {
-            openCards[i].open = true;
-            break;
-        }
-    }
-        
+        getStorage();
+    // 
     try {
 
         openCards.find(o => o.open == true).open
@@ -100,7 +98,7 @@ $(document).ready(function(){
             displayTab(openCards.find(o => o.open == true).tab)
         }
     // only when the art page loads
-    else if(document.getElementById("digital"))// checks if there is an id of digital which means pages must be art
+    if(document.getElementById("digital"))// checks if there is an id of digital which means pages must be art
     {
         displayTab(1); // loads digital page
     }
@@ -113,10 +111,22 @@ $(document).ready(function(){
    
 }) 
 
+function getStorage()
+{
+    for (let i = 0; i <= openCards.length; i++)
+        {
+            if ( sessionStorage.getItem(openCards[i].name))
+            {
+                openCards[i].open = true;
+                break;
+            }
+        }
+}
+
 function enlargeCardFromSessionStorage()
 {
     let cardData = openCards.find(n => n.open == true);
-    tab = cardData.tab
+    numToTab(cardData.tab);
     let card = document.getElementsByClassName("image-card")[cardData.classIndex];
 
     if(previousTab != null) // hides the previous tab
@@ -129,7 +139,7 @@ function enlargeCardFromSessionStorage()
     }
     
     $(tab).show();
-    //tab.style.display = "flex";
+    tab.style.display = "flex";
     previousTab = tab;
     cardCount =0;//resets counter
     

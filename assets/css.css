@@ -509,6 +509,10 @@ border: none;
 }
 
 
+@media only screen and (min-width: 1400px) {
+    .content{height: 85vh ;}
+}
+
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
     /* Mobile */
@@ -772,7 +776,7 @@ border: none;
         padding-left: 10%;
         min-width: 1400px;
         position: relative;
-        height: 85vh;
+
     }
 
     #logo {
