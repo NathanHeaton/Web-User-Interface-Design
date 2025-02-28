@@ -34,7 +34,7 @@ let isCardEnlarged = false; // keep track of if another card is enlarged
 let previousEnlarged= null;
 let previousEnlargedWidth= null ;
 
-let openDn = "openDn";
+let openCards = [{name:"VLE", open: false, previousWidth: 66, classIndex: 1, tab: websitesPage},{name:"DN", open: false, previousWidth: 66, classIndex: 5, tab: websitesPage}]; // stores cards that can be opened from other pages
 
 // carousel Ai written
 //==========================
@@ -72,22 +72,68 @@ $(document).ready(function(){
     {
        $(nav).show();
     }
+
+    if (sessionStorage.length > 0)
+        {
+            for (let i = 0; i <= openCards.length; i++)
+            {
+                if ( sessionStorage.getItem(openCards[i].name == "true"))
+                {
+                    openCards[i].open = true;
+                    break;
+                }
+            }
+        }
+
     // only when the art page loads
     if(document.getElementById("digital"))// checks if there is an id of digital which means pages must be art
     {
         displayTab(1); // loads digital page
     }
      // only when the code page loads
-    if(document.getElementById("websites"))// checks if there is an id of websites which means pages must be website
+    else if(document.getElementById("websites"))// checks if there is an id of websites which means pages must be website
     {
         displayTab(6); // loads web page
-
     }
+
    
 }) 
 
+function enlargeCardFromSessionStorage()
+{
+    let cardData = openCards.find(n => n.open == true);
+    tab = cardData.tab
+    let card = document.getElementsByClassName("image-card")[cardData.classIndex];
+
+    if(previousTab != null) // hides the previous tab
+    {
+        $(previousTab).hide();
+    }
+    for (let i = 0; i <= cards.length; i++)
+    {
+        $(cards[i]).hide();
+    }
+    
+    $(tab).show();
+    tab.style.display = "flex";
+    previousTab = tab;
+    cardCount =0;//resets counter
+    
+    // fades in all web cards 1 by 1
+    for (let i = 0; i <= cards.length; i++)
+    {
+        {$(cards[i]).fadeIn()};
+        if (i == cards.length -1)
+        {
+            sessionStorage.setItem(cardData.name, false)
+            enlargeCard(card, 66)
+        }
+        
+    } 
+    cardCount =0;//resets counter
 
 
+}
 function toggleDropDown()
 {
     $(nav).toggle();
@@ -98,37 +144,9 @@ let gamecardinterval;
 //shows websites on portfolio page
 function displayTab(t_tab) // tab is the section the user clicked on e.g web or digital
 {
-    if (sessionStorage.getItem(openDn) == "true")
+    if (sessionStorage.getItem("cardNeedsToBeOpened") == "true")
         {
-            if(previousTab != null) // hides the previous tab
-            {
-                $(previousTab).hide();
-            }
-            numToTab(t_tab);
-    
-            for (let i = 0; i <= cards.length; i++)
-            {
-                $(cards[i]).hide();
-            }
-    
-            $(tab).show();
-            tab.style.display = "flex";
-            previousTab = tab;
-            cardCount =0;//resets counter
-            
-            // fades in all web cards 1 by 1
-            for (let i = 0; i <= cards.length; i++)
-            {
-                {$(cards[i]).fadeIn()};
-                if (i == cards.length -1)
-                {
-                    sessionStorage.setItem(openDn, false)
-                    let card = document.getElementsByClassName("image-card")[2];
-                    enlargeCard(card, 66)
-                }
-                
-            } 
-            cardCount =0;//resets counter
+            enlargeCardFromSessionStorage()
         }
     else
     {
@@ -262,11 +280,13 @@ function enlargeCard(t_this, t_width)
 }
 
 
-function OpenDnCard()
+function addCardToEnlarge(t_cardName) // adds a card to session storage so that in can be enlarged on another page
 {
-    sessionStorage.setItem("openDn", true);
-    console.log("opeinii")
+    let card = openCards.find(item => item.name == t_cardName) // card that need to be added to storage
+    card.open = "true";
+    console.log(openCards);
 
+    sessionStorage.setItem(card.name, true); // placed in session storage
 }
 
 function shrinkCard(t_this, t_width_before)
