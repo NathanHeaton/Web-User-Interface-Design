@@ -39,7 +39,7 @@ let previousEnlargedWidth= null ;
 let openCards = [{name:"VLE", open: false, previousWidth: 66, classIndex: 1, tab: 6},
                 {name:"DN", open: false, previousWidth: 66, classIndex: 4, tab: 6},
                 {name:"STROW", open: false, previousWidth: 66, classIndex: 0, tab: 1},
-                {name:"PHIAST", open: false, previousWidth: 66, classIndex: 10, tab: 7},
+                {name:"PHIAST", open: false, previousWidth: 66, classIndex: 11, tab: 7},
                 {name:"RETROGRADE", open: false, previousWidth: 66, classIndex: 2, tab: 6},
                 {name:"CAR", open: false, previousWidth: 66, classIndex: 11, tab: 2}
             ]; // stores cards that can be opened from other pages
