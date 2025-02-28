@@ -29,12 +29,14 @@ let tab = null;
 let previousTab = null;
 let cards = [null];
 
+let openCardFromStorage = false;
+
 let isCardEnlarged = false; // keep track of if another card is enlarged
 
 let previousEnlarged= null;
 let previousEnlargedWidth= null ;
 
-let openCards = [{name:"VLE", open: false, previousWidth: 66, classIndex: 1, tab: websitesPage},{name:"DN", open: false, previousWidth: 66, classIndex: 5, tab: websitesPage}]; // stores cards that can be opened from other pages
+let openCards = [{name:"VLE", open: false, previousWidth: 66, classIndex: 1, tab: 6},{name:"DN", open: false, previousWidth: 66, classIndex: 4, tab: 6}]; // stores cards that can be opened from other pages
 
 // carousel Ai written
 //==========================
@@ -68,25 +70,37 @@ setInterval(() => {
 
 
 $(document).ready(function(){
+    let errorOpening = false;
     if(window.innerWidth > 800)
     {
        $(nav).show();
     }
 
     if (sessionStorage.length > 0)
+    for (let i = 0; i <= openCards.length; i++)
+    {
+        if ( sessionStorage.getItem(openCards[i].name))
         {
-            for (let i = 0; i <= openCards.length; i++)
-            {
-                if ( sessionStorage.getItem(openCards[i].name == "true"))
-                {
-                    openCards[i].open = true;
-                    break;
-                }
-            }
+            openCards[i].open = true;
+            break;
         }
+    }
+        
+    try {
 
+        openCards.find(o => o.open == true).open
+    }
+    catch{
+        errorOpening = true;
+    }
+
+    if (errorOpening == false)
+        {
+            openCardFromStorage = true;
+            displayTab(openCards.find(o => o.open == true).tab)
+        }
     // only when the art page loads
-    if(document.getElementById("digital"))// checks if there is an id of digital which means pages must be art
+    else if(document.getElementById("digital"))// checks if there is an id of digital which means pages must be art
     {
         displayTab(1); // loads digital page
     }
@@ -115,7 +129,7 @@ function enlargeCardFromSessionStorage()
     }
     
     $(tab).show();
-    tab.style.display = "flex";
+    //tab.style.display = "flex";
     previousTab = tab;
     cardCount =0;//resets counter
     
@@ -125,7 +139,7 @@ function enlargeCardFromSessionStorage()
         {$(cards[i]).fadeIn()};
         if (i == cards.length -1)
         {
-            sessionStorage.setItem(cardData.name, false)
+            sessionStorage.clear()
             enlargeCard(card, 66)
         }
         
@@ -144,10 +158,11 @@ let gamecardinterval;
 //shows websites on portfolio page
 function displayTab(t_tab) // tab is the section the user clicked on e.g web or digital
 {
-    if (sessionStorage.getItem("cardNeedsToBeOpened") == "true")
-        {
-            enlargeCardFromSessionStorage()
-        }
+    if (openCardFromStorage)
+    {
+        openCardFromStorage = false;
+        enlargeCardFromSessionStorage()
+    }
     else
     {
         if(previousTab != null) // hides the previous tab
