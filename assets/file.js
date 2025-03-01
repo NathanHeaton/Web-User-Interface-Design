@@ -250,9 +250,14 @@ function numToTab(num){
 // enlarge card
 function enlargeCard(t_this, t_width)
 {
+
     if (isCardEnlarged) // if card is enlarged this card is shrinked
     {
         shrinkCard(previousEnlarged, previousEnlargedWidth);//this shrink that previous card
+        if(t_this == previousEnlarged && window.innerWidth < 800)// togggle image if on mobile
+        {
+            return 0; // breaks out on shrinks card
+        }
     }
 
     previousEnlarged = t_this;
@@ -276,7 +281,9 @@ function enlargeCard(t_this, t_width)
     if(window.innerWidth < 800) // if on mobile
     {
         element.style.width = "100vw"
-        //element.style.padding = "-50px"
+        element.style.paddingBottom ="40px";
+        element.style.marginBottom ="60px";
+
     }
     else{ 
         element.style.width = "100%"
@@ -333,6 +340,8 @@ function shrinkCard(t_this, t_width_before)
     if(window.innerWidth < 800) // if on mobile
     {
         element.style.width = "100%"
+        element.style.paddingBottom ="0px";
+        element.style.margin ="0 0";
     }
     else{
         element.style.width = t_width_before+"%"; // for desktop
