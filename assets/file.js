@@ -44,8 +44,44 @@ let openCards = [{name:"VLE", open: false, previousWidth: 66, classIndex: 1, tab
                 {name:"CAR", open: false, previousWidth: 66, classIndex: 11, tab: 2}
             ]; // stores cards that can be opened from other pages
 
-// carousel Ai written
+// carousel Ai written and page fade transition
 //==========================
+
+/* // fix later
+document.addEventListener("DOMContentLoaded", function() {
+    barba.init({
+        transitions: [
+            {
+                name: "fade",
+                leave(data) {
+                    return new Promise((resolve) => {
+                        data.current.container.style.opacity = 0;
+                        setTimeout(resolve, 250); // Wait for animation
+                    });
+                },
+                enter(data) {
+                    data.next.container.style.opacity = 0;
+                    setTimeout(() => {
+                        data.next.container.style.opacity = 1;
+                    }, 500);
+                },
+                after() {
+                     // Reload file.js manually if needed
+                    const script = document.createElement("script");
+                    script.src = "assets/file.js"; // Adjust path if necessary
+                    script.type = "text/javascript";
+                    script.onload = () => console.log("file.js reloaded");
+                    
+                    document.body.appendChild(script);
+
+                    pageLoad(); 
+
+                }
+            }
+        ]
+    });
+});
+*/
 
 const slides = document.querySelectorAll('.carousel-item');
 const dots = document.querySelectorAll('.dot');
@@ -75,7 +111,8 @@ setInterval(() => {
 }, 6000); // Change slide every 3 seconds
 
 
-$(document).ready(function(){
+function pageLoad(){
+    console.log("Re-running scripts on page load!");
     let errorOpening = false;
     if(window.innerWidth > 800)
     {
@@ -110,7 +147,7 @@ $(document).ready(function(){
     }
 
    
-}) 
+}
 
 function getStorage()
 {

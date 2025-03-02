@@ -40,7 +40,10 @@ body {
     padding: 0;
 }
 
-
+[data-barba="container"] {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+}
 
 a{
     color:#FFF;
@@ -107,7 +110,7 @@ p, li {
 
 /* Navigation */
 .main-nav {
-    display: none;
+    /*display: none;*/
 }
 
 #nav-area{
