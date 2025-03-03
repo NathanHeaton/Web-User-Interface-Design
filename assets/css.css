@@ -146,21 +146,24 @@ footer{
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    flex-wrap: wrap;
 
 }
 
 .text-logo
 {
+    margin-top: 50px;
     display: flex;
-    align-items: flex-end;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 
 #logo-footer{
-    padding: 15px;
-    width: 100px;
-    height: 100px;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    scale: .8;
 }
 
 /* Button */
@@ -596,10 +599,8 @@ border: none;
         
     }
 
-    #logo-footer{
-        width: 80px;
-        height: 80px;
-    }
+
+
 
     #image-side {
         width: 100%;
@@ -628,7 +629,7 @@ border: none;
         position: absolute;
         padding: 10px;
         left: 95px;
-        font-size: 42px;
+        font-size: 36px;
    
     }
 
@@ -663,6 +664,14 @@ border: none;
 
     .footer-nav{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-logo{
+        margin-top: 0;
+
     }
 
     .image-center{
@@ -741,8 +750,6 @@ border: none;
         font-size: 40px;
     }
 
-
-
     h1#projects-title {
         width: 70%;
         margin: 0 auto;
@@ -757,6 +764,7 @@ border: none;
         padding-bottom: 80px;
         max-width: 1000px;
     }
+
 
     nav {
         position: absolute;
@@ -782,6 +790,8 @@ border: none;
     }
 
     #logo {
+        height: 100px;
+        width: 100px;
         position: relative;
         z-index: 1;
         top: 25px;
