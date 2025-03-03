@@ -539,23 +539,22 @@ border: none;
     }
 
     .topnav {
-        background-color: #2f5546;
+        background-color: rgb(12, 12, 12);
         width: 100vw;
         z-index: 1;
         margin-top: 70px;
-        height: 300px;
         position: relative;
     }
 
     .topnav a {
         color: white;
-        padding: 14px 16px;
+        padding: 16px 16px;
         text-decoration: none;
-        font-size: 32px;
+        font-size: 28px;
         display: block;
         text-align: right;
-        padding-top:0px ;
-        padding-bottom: 0px;        
+        padding-top:15px ;
+        padding-bottom: 5px;        
     }
 
     a{
@@ -567,7 +566,7 @@ border: none;
     }
 
     .active {
-        background-color: #69de90;
+        background-color: #2f5546;;
     }
 
     .iframe{
