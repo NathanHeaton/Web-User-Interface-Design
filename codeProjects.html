@@ -22,7 +22,7 @@
     <body>
         <header id="nav-area">
             <section id="nav-content">
-                <img id="logo" class="desktop" src="assets/img/logo.png" alt="N logo">
+                <a href="index.html" class="no-padding"><img id="logo" class="desktop" src="assets/img/logo.png" alt="N logo"></a>
                 <button id="hamburger"  ontouchstart="toggleDropDown()"><img src="assets/img/Hamburger.png"></button>
                 <h1 class="title">Nathan H</h1>             
                 <nav class="main-nav">
@@ -424,6 +424,12 @@
                             JavaScript: 362 loc
 
                         </p>
+                        <p>To see my entire report of my process and the steps involved in my process please view download the below PDF and my early wireframes:</p>
+
+                        <a class="btn" href="doccuments/Portfolio Design Doccument.pdf" download target="_blank">Portfolio Design Doccument.pdf</a>
+                        <a class="btn" href="doccuments/mobile and desktop high fidelty .pdf" download target="_blank">High Fidelty.pdf</a>
+                        <a class="btn" href="doccuments/mobile and desktop medium.pdf" download target="_blank">Medium Fidelty.pdf</a>
+                        <br>
                         <button class="btn"><a href="https://nathanheaton.github.io/Web-User-Interface-Design/index.html" id="button-link" target="_blank">Home Page</a></button>
                         <div class="Image-inner-card" >
                             <img src="assets/img/codeprojects-showcase.png" alt="preview of project page"  width="100%" height="100%" style="object-fit: cover;">
@@ -825,12 +831,12 @@
 
             </section>
             <section class="flexbox" id="other">
-                <section class="card-content-medium" >
-                    <div class="image-card other-cards" tabindex="1" onkeydown="handleKey(event, this, 50)" onclick="enlargeCard(this, 50)">
+                <section class="card-content" >
+                    <div class="image-card other-cards" tabindex="18" onkeydown="handleKey(event, this, 33)" onclick="enlargeCard(this, 33)">
                         <div class="card-titles"><h2 >Data Self Portrait</h2></div>
                         <img src="assets/img/Data Self Portrait poster.png" class="curved-top" alt="website game puzzle exploration" width="100%">
                     </div>
-                    <button class="back-button" onclick="shrinkCard(this, 50)" >back</button>
+                    <button class="back-button" onclick="shrinkCard(this, 33)" >back</button>
                     <article class="card-text" >
                         <h1>Data Self Portrait</h1>
                         <h3>SETU</h3>
@@ -867,7 +873,44 @@
                     </section>
                 </section>
 
+                <section class="card-content-large" >
+                    <div class="image-card web-cards"  tabindex="19" onkeydown="handleKey(event, this, 66)" onclick="enlargeCard(this, 66)">
+                            <div class="card-titles"><h2 >To-Do App Wireframe</h2></div>
+                            <img src="assets/img/Todo-App.png"  class="curved-top" alt="retrograde website" width="100%" height="100%" style="object-fit: cover;">
+                    </div>
+                    <button class="back-button" onclick="shrinkCard(this, 66)" >back</button>
+                    <article class="card-text" >
+                        <article class="title-subText">
+                            <h1 class="text-small-margin">To-Do App Wirefram</h1>
+                            <h3 class="text-small-margin">SETU Y2</h3>
+                        </article>
+     
+                        <p>
+                            A productivity-focused to-do app with customizable views and smart organization features. Users can switch between Week/Month Views for upcoming tasks, an Eisenhower Matrix 
+                            for priority-based sorting, and colour-coded task groups that learn user preferences. The app supports 
+                            file attachments, importance tags, and group sorting for better task management. Custom notifications ensure timely reminders, while personalized navigation allows
+                             users to enable or disable different views, including Kanban boards.
+                             <br><br>
+                             Below is a pdf of all my high fidelity Wireframes (issue with export caused some to not render corectly):
+                            </p>
+
+                        <button class="btn"><a href="assets/pdf/desktop eisenhower matrix page.pdf" id="button-link" target="_blank">Wireframe PDF</a></button>
+                        
+                        <div class="Image-inner-card" >
+                            <!-- add Image -->
+                            <img src="assets/img/Todo-App-Mobile.png" alt="retrograde music preview website"  width="50%" height="50%" style="object-fit: cover;">
+                        </div>
+                        
+                    </article>
+                    <section class="short-description">
+                        <p class="description-text"><strong>Description</strong>: SETU Y2, wireframes for todo list app<br>
+                            <strong>Tools</strong>: Penpot(wireframing)<br>
+                            <i>Click/Tap image to find out more!</i></p>
+                    </section>
+                </section>   
+
             </section>
+
         </div>
 
         <section id="about-page">
