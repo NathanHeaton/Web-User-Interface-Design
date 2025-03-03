@@ -78,7 +78,7 @@
         <div class="image-content">        
             <section class="flexbox" id="websites">
                 <section class="card-content" >
-                    <div class="image-card web-cards" onclick="enlargeCard(this, 33)">
+                    <div class="image-card web-cards" tabindex="0" onkeydown="handleKey(event, this, 33)" onclick="enlargeCard(this, 33)">
                         <div class="card-titles"><h2 >Blooming Flower Clock</h2></div>
                         <img src="assets/img/Blooming flower image.png" class="curved-top" alt="pixel art flower" class="card-main-image" width="100%">
                     </div>
@@ -108,7 +108,7 @@
                     </section>
                 </section>    
                 <section class="card-content-large" >
-                    <div class="image-card web-cards has-extension"  onclick="enlargeCard(this, 66)">
+                    <div class="image-card web-cards has-extension" tabindex="1" onkeydown="handleKey(event, this, 66)" onclick="enlargeCard(this, 66)">
                             <div class="card-titles"><h2 >VLE (Virtual Learning Enviornment)</h2></div>
                             <img src="assets/img/Module page adjusted.png" class="curved-top" alt="VLE login page" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -226,7 +226,7 @@
                 </section>
                 
                 <section class="card-content-large" >
-                    <div class="image-card web-cards"  onclick="enlargeCard(this, 66)">
+                    <div class="image-card web-cards"  tabindex="2" onkeydown="handleKey(event, this, 66)" onclick="enlargeCard(this, 66)">
                             <div class="card-titles"><h2 >Retrograde Website</h2></div>
                             <img src="assets/img/Retrograde.png"class="curved-top" alt="retrograde website" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -256,7 +256,7 @@
                 </section>   
 
                 <section class="card-content" >
-                    <div class="image-card web-cards" onclick="enlargeCard(this, 33)">
+                    <div class="image-card web-cards" tabindex="3" onkeydown="handleKey(event, this, 33)" onclick="enlargeCard(this, 33)">
                         <div class="card-titles"><h2 >Intern Manager</h2></div>
                         <img src="assets/img/Intern Manager.png" class="curved-top" alt="Intern Manager login page" class="card-main-image" width="100%">
                     </div>
@@ -281,7 +281,7 @@
                 </section>   
 
                 <section class="card-content-large" id="dn" >
-                    <div class="image-card web-cards has-extension"  onclick="enlargeCard(this, 66)">
+                    <div class="image-card web-cards has-extension" tabindex="4" onkeydown="handleKey(event, this, 66)"  onclick="enlargeCard(this, 66)">
                             <div class="card-titles"><h2 >DNOreilly's Fuels Website</h2></div>
                             <img src="assets/img/dnoreillys-website.PNG" class="curved-top" alt="website for dnoreillysfuels LTD selling fuels" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -409,7 +409,7 @@
                     </section>
                 </section>
                 <section class="card-content" >
-                    <div class="image-card web-cards" onclick="enlargeCard(this, 33)">
+                    <div class="image-card web-cards" tabindex="5" onkeydown="handleKey(event, this, 33)" onclick="enlargeCard(this, 33)">
                         <div class="card-titles"><h2 >Portfolio Website</h2></div>
                         <img src="assets/img/porfolio-page-mobile.png" class="curved-top" alt="portflio home page mobile" class="card-main-image" width="100%">
                     </div>
@@ -436,7 +436,7 @@
                     </section>
                 </section>    
                 <section class="card-content" >
-                    <div class="image-card web-cards" onclick="enlargeCard(this, 33)">
+                    <div class="image-card web-cards" tabindex="6" onkeydown="handleKey(event, this, 33)" onclick="enlargeCard(this, 33)">
                         <div class="card-titles"><h2 >USAP Redesign Wireframe</h2></div>
                         <img src="assets/img/USAP redesign.PNG" class="curved-top" alt="medium fidelity redesign of usap website" class="card-main-image" width="100%">
                     </div>
@@ -469,7 +469,7 @@
                 </section>       
                 
                 <section class="card-content-large" >
-                    <div class="image-card web-cards" onclick="enlargeCard(this, 66)">
+                    <div class="image-card web-cards" tabindex="7" onkeydown="handleKey(event, this, 66)" onclick="enlargeCard(this, 66)">
                         <div class="card-titles"><h2 >Riverside Take Away Website</h2></div>
                         <img src="assets/img/Riverside Takeaway Website.png" class="curved-top" alt="website for a take away" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -501,7 +501,7 @@
                 </section>     
 
                 <section class="card-content-large" >
-                    <div class="image-card web-cards" onclick="enlargeCard(this, 66)">
+                    <div class="image-card web-cards" tabindex="8" onkeydown="handleKey(event, this, 66)" onclick="enlargeCard(this, 66)">
                         <div class="card-titles"><h2 >Escape from Time</h2></div>
                         <img src="assets/img/Escape from time gameplay.PNG" class="curved-top" alt="website game puzzle exploration" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -536,7 +536,7 @@
                 </section>  
 
                 <section class="card-content" >
-                    <div class="image-card web-cards" onclick="enlargeCard(this, 33)">
+                    <div class="image-card web-cards" tabindex="9" onkeydown="handleKey(event, this, 33)" onclick="enlargeCard(this, 33)">
                         <div class="card-titles"><h2 >Band Promotion Website</h2></div>
                         <img src="assets/img/band-website.PNG" class="curved-top" alt="website for setu to promote a band" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -568,7 +568,7 @@
             <section class="flexbox" id="games">
 
                 <section class="card-content" >
-                    <div class="image-card game-cards"  onclick="enlargeCard(this, 33)">
+                    <div class="image-card game-cards"  tabindex="10" onkeydown="handleKey(event, this, 33)" onclick="enlargeCard(this, 33)">
                         <div class="card-titles"><h2 >Golden-Duel</h2></div>
                         <img src="assets/img/golden duel.png"  class="curved-top" alt="game about fliying around and hitting targets" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -598,7 +598,7 @@
                 </section>    
     
                 <section class="card-content-large" >
-                    <div class="image-card game-cards"  onclick="enlargeCard(this, 66)">
+                    <div class="image-card game-cards" tabindex="11" onkeydown="handleKey(event, this, 66)" onclick="enlargeCard(this, 66)">
                         <div class="card-titles"><h2 >An Phiast's Destruction</h2></div>
                         <img src="assets/img/An Phiasts Destruction.png" class="curved-top" alt="website game puzzle exploration" width="100%"  style="object-fit: cover;">
                         <div class="Image-inner-card" >
@@ -632,7 +632,7 @@
                 </section>
 
                 <section class="card-content-large" >
-                    <div class="image-card game-cards"  onclick="enlargeCard(this, 66)">
+                    <div class="image-card game-cards" tabindex="12" onkeydown="handleKey(event, this, 66)" onclick="enlargeCard(this, 66)">
                         <div class="card-titles"><h2 >Quest of An Phiast</h2></div>
                         <img src="assets/img/Quest of Phiast feeding.png" class="curved-top" alt="fishing game" width="100%"  style="object-fit: cover;">
                         <div class="Image-inner-card" >
@@ -672,7 +672,7 @@
                     </section>
                 </section>
                 <section class="card-content-medium" >
-                    <div class="image-card game-cards"  onclick="enlargeCard(this, 50)">
+                    <div class="image-card game-cards"  tabindex="13" onkeydown="handleKey(event, this, 50)" onclick="enlargeCard(this, 50)">
                         <div class="card-titles"><h2 >Cardochism</h2></div>
                         <img src="assets/img/cardochism gameplay.PNG" class="curved-top" alt="roulette themed bullet hell game" width="100%" object-fit: style="object-fit: cover;">
                         <div class="Image-inner-card" >
@@ -702,7 +702,7 @@
                     </section>
                 </section>
                 <section class="card-content-medium" >
-                    <div class="image-card game-cards"  onclick="enlargeCard(this, 50)">
+                    <div class="image-card game-cards" tabindex="14" onkeydown="handleKey(event, this, 50)" onclick="enlargeCard(this, 50)">
                         <div class="card-titles"><h2 >Escape from time</h2></div>
                         <img src="assets/img/Escape from time gameplay.PNG" class="curved-top" alt="website game puzzle exploration" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -735,7 +735,7 @@
                     </section>
                 </section>
                 <section class="card-content-large" >
-                    <div class="image-card game-cards"  onclick="enlargeCard(this, 66)">
+                    <div class="image-card game-cards" tabindex="15" onkeydown="handleKey(event, this, 66)" onclick="enlargeCard(this, 66)">
                         <div class="card-titles"><h2 >Cat and Rat</h2></div>
                         <img src="assets/img/cat and rat game.PNG" class="curved-top" alt="website game puzzle exploration" width="100%"  style="object-fit: cover;">
                         <div class="Image-inner-card" >
@@ -769,7 +769,7 @@
                     </section>
                 </section>
                 <section class="card-content" >
-                    <div class="image-card game-cards"  onclick="enlargeCard(this, 33)">
+                    <div class="image-card game-cards"  tabindex="16" onkeydown="handleKey(event, this, 33)" onclick="enlargeCard(this, 33)">
                         <div class="card-titles"><h2 >Heli-Shooter</h2></div>
                         <img src="assets/img/Heli-shooter gameplay.PNG"class="curved-top" alt="game about fliying around and hitting targets" width="100%" height="100%" style="object-fit: cover;">
                     </div>
@@ -798,7 +798,7 @@
                     </section>
                 </section>    
                 <section class="card-content-large" >
-                    <div class="image-card game-cards"  onclick="enlargeCard(this, 66)">
+                    <div class="image-card game-cards" tabindex="17" onkeydown="handleKey(event, this, 66)"  onclick="enlargeCard(this, 66)">
                         <div class="card-titles"><h2 >Fish Grow</h2></div>
                         <img src="assets/img/fish growing game.PNG" class="curved-top" alt="website game puzzle exploration" width="100%">
                     </div>
@@ -826,7 +826,7 @@
             </section>
             <section class="flexbox" id="other">
                 <section class="card-content-medium" >
-                    <div class="image-card other-cards"  onclick="enlargeCard(this, 50)">
+                    <div class="image-card other-cards" tabindex="1" onkeydown="handleKey(event, this, 50)" onclick="enlargeCard(this, 50)">
                         <div class="card-titles"><h2 >Data Self Portrait</h2></div>
                         <img src="assets/img/Data Self Portrait poster.png" class="curved-top" alt="website game puzzle exploration" width="100%">
                     </div>

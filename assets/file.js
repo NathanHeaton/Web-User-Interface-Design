@@ -138,6 +138,13 @@ function getStorage()
         }
 }
 
+function handleKey(event, card, t_num) {
+    if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault(); // Prevent scrolling on space press
+        enlargeCard(card, t_num);
+    }
+}
+
 function enlargeCardFromSessionStorage()
 {
     let cardData = openCards.find(n => n.open == true);
