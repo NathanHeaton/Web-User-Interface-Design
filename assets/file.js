@@ -51,8 +51,8 @@ let openCards = [{name:"VLE", open: false, previousWidth: 66, classIndex: 1, tab
 document.addEventListener("DOMContentLoaded", function() {
 
     pageLoad();
-    
-   /* barba.init({
+    // this code was commented out
+   barba.init({
         transitions: [
             {
                 name: "fade",
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         ]
-    });*/
+    });
     
 });
 
