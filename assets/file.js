@@ -52,21 +52,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     pageLoad();
     
-    barba.init({
+   /* barba.init({
         transitions: [
             {
                 name: "fade",
                 leave(data) {
                     return new Promise((resolve) => {
                         data.current.container.style.opacity = 0;
-                        setTimeout(resolve, 250); // Wait for animation
+                        setTimeout(resolve, 125); // Wait for animation
                     });
                 },
                 enter(data) {
                     data.next.container.style.opacity = 0;
                     setTimeout(() => {
                         data.next.container.style.opacity = 1;
-                    }, 500);
+                    }, 125);
                 },
                 after() {
 
@@ -75,12 +75,98 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         ]
-    });
+    });*/
     
 });
 
+if(window.innerWidth > 768)
+{
+    document.addEventListener("mousemove",mouseEffect)
+    document.addEventListener("wheel",mouseEffectWheel)
+}
 
+let customMouse = document.getElementById("mouse");
+let mouseText = document.getElementById("mouse-over-text");
+let mousePreviousPosition = {x: 0, y: 0}
 
+let mouseScale = 1;
+let mouseSize = 15;
+
+let mousesEnlarged = false;
+let animationIsPlaying = false;
+
+function mouseEffect(event)
+{
+    let mouse = {x: event.pageX, y: event.pageY}
+    let element = document.elementFromPoint(event.clientX,event.clientY)// finds the element the user is hovering over
+    let cursorStyle = window.getComputedStyle(element).cursor;
+    if (cursorStyle === "pointer" && mousesEnlarged == false && element.tagName == "DIV")
+        {
+            animationIsPlaying = true;
+            mousesEnlarged = true;
+            mouseText.style.display = "flex";
+            $(customMouse).css("background-color", "#0066cc");
+            $(customMouse).animate(
+            {
+                scale: mouseScale,
+                width: "75px",
+                height: "75px"
+            }
+           , 300)
+        }
+    else if (cursorStyle === "pointer" && mousesEnlarged == false)
+    {
+        animationIsPlaying = true;
+        mousesEnlarged = true;
+        mouseScale = 2
+        $(customMouse).css("background-color", "#0066cc");
+        $(customMouse).animate(
+        {
+            scale: mouseScale,
+        }
+       , 500)
+
+    }
+
+    
+    if (cursorStyle != "pointer" && mousesEnlarged == true )
+    {
+        mousesEnlarged = false;
+        mouseText.style.display = "none";
+        
+        console.log("shrinking")
+        $(customMouse).stop("stopAll")
+        mouseScale = 1
+        $(customMouse).css("background-color", "#69de90");
+        $(customMouse).animate(
+            {
+                scale: mouseScale,
+                width: mouseSize,
+                height: mouseSize
+            }
+           ,100)
+    }
+
+    //console.log(element)
+    //stored for when page scrolls
+    mousePreviousPosition.x = mouse.x;
+    mousePreviousPosition.y = mouse.y;
+
+    customMouse.style.left = mouse.x - (mouseSize/2)  + "px";
+    customMouse.style.top = mouse.y - (mouseSize/2) + "px";
+
+    
+
+}
+
+function mouseEffectWheel(event)
+{
+
+    customMouse.style.left = event.pageX + "px";
+    customMouse.style.top = event.clientY + document.documentElement.scrollTop + "px";
+    //console.log(mousePreviousPosition.y +"+"+ document.documentElement.scrollTop + "px")
+
+}
 
 
 const slides = document.querySelectorAll('.carousel-item');
