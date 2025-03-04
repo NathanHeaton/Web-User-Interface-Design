@@ -52,7 +52,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
     pageLoad();
     
+    barba.init({
+        transitions: [
+            {
+                name: "fade",
+                leave(data) {
+                    return new Promise((resolve) => {
+                        data.current.container.style.opacity = 0;
+                        setTimeout(resolve, 250); // Wait for animation
+                    });
+                },
+                enter(data) {
+                    data.next.container.style.opacity = 0;
+                    setTimeout(() => {
+                        data.next.container.style.opacity = 1;
+                    }, 500);
+                },
+                after() {
+
+                    pageLoad(); 
+
+                }
+            }
+        ]
+    });
+    
 });
+
+
 
 
 
