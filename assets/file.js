@@ -51,32 +51,6 @@ let openCards = [{name:"VLE", open: false, previousWidth: 66, classIndex: 1, tab
 document.addEventListener("DOMContentLoaded", function() {
 
     pageLoad();
-    // this code was commented out
-   barba.init({
-        transitions: [
-            {
-                name: "fade",
-                leave(data) {
-                    return new Promise((resolve) => {
-                        data.current.container.style.opacity = 0;
-                        setTimeout(resolve, 125); // Wait for animation
-                    });
-                },
-                enter(data) {
-                    data.next.container.style.opacity = 0;
-                    setTimeout(() => {
-                        data.next.container.style.opacity = 1;
-                    }, 125);
-                },
-                after() {
-
-                    pageLoad(); 
-
-                }
-            }
-        ]
-    });
-    
 });
 
 if(window.innerWidth > 768)
@@ -100,6 +74,7 @@ function mouseEffect(event)
     let mouse = {x: event.pageX, y: event.pageY}
     let element = document.elementFromPoint(event.clientX,event.clientY)// finds the element the user is hovering over
     let cursorStyle = window.getComputedStyle(element).cursor;
+
     if (cursorStyle === "pointer" && mousesEnlarged == false && element.tagName == "DIV")
         {
             animationIsPlaying = true;

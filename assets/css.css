@@ -39,9 +39,9 @@ body {
     padding: 0;
 }
 
-[data-barba="container"] {
-    opacity: 1;
-    transition: opacity 0.125s ease-in-out;
+::selection {
+    background-color: #1eff69; /* Change highlight background */
+    color: rgb(255, 255, 255); /* Change text color */
 }
 
 .flex-row{
